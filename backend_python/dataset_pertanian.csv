@@ -1,0 +1,500 @@
+sumber_data;nama_tanaman;jenis_hama_penyakit_tanaman;gejala;Organisme Penyebab;solusi
+manual;Bawang Merah;Blas;Daun bercak coklat berbentuk belah ketupat;Jamur Magnaporthe oryzae;Gunakan varietas tahan, fungisida, perbaikan drainase
+manual;Bawang Merah;Wereng Batang Coklat;Daun menguning lalu mengering;Nilaparvata lugens;Gunakan insektisida selektif, varietas tahan
+manual;Bawang Merah;Ulat Grayak;Daun berlubang, bercak putih transparan, daun kering;Spodoptera litura;Sanitasi lahan, rotasi tanaman, perangkap feromon, musuh alami, insektisida selektif
+manual;Bawang Merah;Layu Fusarium;Daun layu dari bawah ke atas;Fusarium oxysporum;Solarisasi tanah, fungisida, varietas tahan
+manual;Bawang Merah;Antraknosa;Buah muncul bercak hitam cekung;Colletotrichum capsici;Fungisida, panen cepat, rotasi tanaman
+manual;Bawang Merah;Busuk Buah;Buah coklat kehitaman, busuk lembek;Phytophthora palmivora;Pangkas buah sakit, fungisida, drainase baik
+manual;Bawang Merah;Karat Daun;Daun bercak kuning-oranye;Hemileia vastatrix;Fungisida tembaga, pangkas daun sakit
+manual;Bawang Merah;Virus Kuning;Daun keriting, kerdil, berubah kuning;Virus Gemini via kutu kebul;Kendalikan kutu kebul, varietas tahan
+manual;Bawang Merah;Busuk Akar;Akar membusuk, tanaman layu mendadak;Phytophthora spp.;Perbaiki drainase, fungisida tanah
+manual;Bawang Merah;Penggerek Buah;Buah berlubang kecil, biji rusak;Hypothenemus hampei;Perangkap serangga, insektisida nabati
+kaggle;Bayam;Daun Bakteri;Terdapat bercak pada daun;Bakteri Xanthomonas spp.;Sanitasi tanaman, penggunaan benih sehat, dan penyemprotan bakterisida
+kaggle;Bayam;Bercak Daun Cercospora;Daun tetap hijau, Terdapat bercak pada daun, Pertumbuhan tanaman terhambat;Jamur Cercospora beticola;Rotasi tanaman, fungisida, dan sanitasi lahan
+kaggle;Bayam;Embun Tepung;Daun berwarna kuning, Batang mengalami pembusukan;Jamur Erysiphe spp.;Penyemprotan fungisida dan menjaga sirkulasi udara
+kaggle;Bayam;Bercak Daun Cercospora;Daun berwarna kuning, Pertumbuhan tanaman terhambat;Jamur Cercospora beticola;Fungisida dan sanitasi
+kaggle;Bayam;Busuk Akar;Daun berwarna kuning, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;Jamur tanah Pythium spp.;Perbaiki drainase dan gunakan fungisida tanah
+kaggle;Bayam;Layu Fusarium;Terdapat bercak pada daun, Daun mengalami kelayuan;Jamur tanah Fusarium oxysporum;Rotasi tanaman dan gunakan fungisida
+kaggle;Bayam;Busuk Lunak;Daun berwarna kuning, Daun mengalami kelayuan, Pertumbuhan tanaman terhambat;Bakteri pembusuk jaringan;Sanitasi kebun
+kaggle;Bayam;Bercak Daun Cercospora;Terdapat bercak pada daun, Daun mengalami kelayuan, Batang mengalami pembusukan;jamur Cercospora beticola;sanitasi daun sakit, rotasi tanaman, menjaga kelembapan, fungisida
+kaggle;Bayam;Busuk Akar Phytophthora;Daun tetap hijau, Terdapat bercak pada daun, Pertumbuhan tanaman terhambat;jamur air Phytophthora spp.;perbaikan drainase tanah, rotasi tanaman, sanitasi kebun, fungisida
+kaggle;Bayam;Busuk Lunak;Daun berwarna kuning, Terdapat bercak pada daun, Pertumbuhan tanaman terhambat;bakteri Pectobacterium carotovorum;sanitasi kebun, penggunaan benih sehat, pengaturan kelembapan, bakterisida
+kaggle;Bayam;Busuk Lunak;Daun berwarna kuning, Daun mengalami kelayuan, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;bakteri Pectobacterium carotovorum;sanitasi kebun, penggunaan bibit sehat, pengaturan kelembapan, bakterisida
+kaggle;Bayam;Bercak Daun Cercospora;Daun berwarna kuning, Batang mengalami pembusukan;jamur Cercospora beticola;sanitasi daun sakit, rotasi tanaman, varietas tahan, fungisida
+kaggle;Bayam;Layu Bakteri;Terdapat bercak pada daun, Daun mengalami kelayuan;bakteri Ralstonia solanacearum;bibit sehat, sanitasi lahan, rotasi tanaman, bakterisida
+kaggle;Bayam;Busuk Lunak;Daun tetap hijau, Terdapat bercak pada daun, Daun mengalami kelayuan, Batang mengalami pembusukan;bakteri Pectobacterium carotovorum;sanitasi kebun, pengaturan kelembapan, bibit sehat, bakterisida
+kaggle;Bayam;Layu Fusarium;Daun tetap hijau, Terdapat bercak pada daun, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;Jamur Fusarium oxysporum;Rotasi tanaman, sanitasi lahan, fungisida
+kaggle;Bayam;Busuk Buah Botrytis;Daun tetap hijau, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;Jamur Botrytis cinerea;Sanitasi tanaman, fungisida
+kaggle;Bayam;Embun Tepung;Daun tetap hijau, Daun mengalami kelayuan, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;Jamur Erysiphe spp.;sanitasi daun sakit, pengurangan kelembaban, fungisida sulfur
+kaggle;Cabai;Busuk Akar Phytophthora;Terdapat bercak pada daun, Daun mengalami kelayuan, Pertumbuhan tanaman terhambat;Jamur Phytophthora capsici;Rotasi tanaman, drainase baik, dan fungisida
+kaggle;Cabai;Busuk Akar Phytophthora;Daun tetap hijau, Terdapat bercak pada daun, Daun mengalami kelayuan, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;Jamur Phytophthora capsici;Drainase tanah baik dan fungisida
+kaggle;Cabai;Layu Fusarium;Daun berwarna kuning, Terdapat bercak pada daun, Daun mengalami kelayuan, Batang mengalami pembusukan;Jamur Fusarium oxysporum;Gunakan varietas tahan dan rotasi tanaman
+kaggle;Cabai;Busuk Akar Phytophthora;Daun tetap hijau, Pertumbuhan tanaman terhambat;jamur air Phytophthora capsici;perbaikan drainase tanah, penggunaan mulsa, rotasi tanaman, fungisida
+kaggle;Cabai;Busuk Lunak;Terdapat bercak pada daun, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;bakteri Pectobacterium carotovorum;sanitasi kebun, pengaturan kelembapan, penggunaan bibit sehat, bakterisida
+kaggle;Cabai;Antraknosa;Daun tetap hijau, Terdapat bercak pada daun, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;jamur Colletotrichum capsici;sanitasi buah sakit, rotasi tanaman, fungisida
+kaggle;Cabai;Busuk Buah Botrytis;Daun berwarna kuning, Terdapat bercak pada daun, Daun mengalami kelayuan, Pertumbuhan tanaman terhambat;Jamur Botrytis cinerea;Sanitasi buah sakit, pengaturan kelembapan, fungisida
+kaggle;Cabai;Antraknosa;Terdapat bercak pada daun, Daun mengalami kelayuan;Jamur Colletotrichum capsici;Sanitasi buah sakit, rotasi tanaman, fungisida
+kaggle;Cabai;Busuk Lunak;Daun mengalami kelayuan, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;Bakteri Erwinia carotovora;Drainase baik, sanitasi tanaman, bakterisida
+kaggle;Cabai;Antraknosa;Daun mengalami kelayuan, Batang mengalami pembusukan;Jamur Colletotrichum capsici;Sanitasi buah sakit, fungisida
+kaggle;Cabai;Busuk Buah Botrytis;Daun berwarna kuning, Terdapat bercak pada daun, Daun mengalami kelayuan, Pertumbuhan tanaman terhambat;Jamur Botrytis cinerea;Sanitasi buah sakit, fungisida
+kaggle;Cabai;Busuk Akar Phytophthora;Terdapat bercak pada daun, Daun mengalami kelayuan, Batang mengalami pembusukan;Jamur Phytophthora capsici;drainase baik, mulsa plastik, rotasi tanaman, fungisida metalaksil
+kaggle;Cabai;Karat Daun;Daun tetap hijau, Terdapat bercak pada daun, Pertumbuhan tanaman terhambat;Jamur Puccinia spp.;sanitasi daun sakit, pengaturan jarak tanam, fungisida mankozeb
+manual;Cabai;Blas;Daun bercak coklat berbentuk belah ketupat;Jamur Magnaporthe oryzae;Gunakan varietas tahan, fungisida, perbaikan drainase
+manual;Cabai;Wereng Batang Coklat;Daun menguning lalu mengering;Nilaparvata lugens;Gunakan insektisida selektif, varietas tahan
+manual;Cabai;Ulat Grayak;Daun berlubang tidak beraturan;Spodoptera litura;Gunakan insektisida biologis, perangkap feromon
+manual;Cabai;Thrips;Daun muda bercak keperakan, berubah coklat tembaga, mengeriting, tanaman kerdil, pucuk mati;Thrips parvispinus;Mulsa perak, sanitasi tanaman, perangkap kuning, musuh alami (Coccinellidae, Chrysopidae), insektisida selektif bila ambang tercapai
+manual;Cabai;Antraknosa;Buah muncul bercak hitam cekung;Colletotrichum capsici;Fungisida, panen cepat, rotasi tanaman
+manual;Cabai;Busuk Buah;Buah coklat kehitaman, busuk lembek;Phytophthora palmivora;Pangkas buah sakit, fungisida, drainase baik
+manual;Cabai;Karat Daun;Daun bercak kuning-oranye;Hemileia vastatrix;Fungisida tembaga, pangkas daun sakit
+manual;Cabai;Virus Kuning;Daun keriting, kerdil, berubah kuning;Virus Gemini via kutu kebul;Kendalikan kutu kebul, varietas tahan
+manual;Cabai;Busuk Akar;Akar membusuk, tanaman layu mendadak;Phytophthora spp.;Perbaiki drainase, fungisida tanah
+manual;Cabai;Penggerek Buah;Buah berlubang kecil, biji rusak;Hypothenemus hampei;Perangkap serangga, insektisida nabati
+kaggle;Jagung;Busuk Akar;Terdapat bercak pada daun, Daun mengalami kelayuan, Pertumbuhan tanaman terhambat;Jamur Rhizoctonia solani;Drainase tanah baik
+kaggle;Jagung;Embun Tepung;Daun tetap hijau, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;Jamur Erysiphe spp.;Fungisida sulfur
+kaggle;Jagung;Busuk Buah Botrytis;Daun tetap hijau, Terdapat bercak pada daun, Daun mengalami kelayuan;Jamur Botrytis cinerea;Gunakan fungisida, sanitasi kebun, kurangi kelembapan
+kaggle;Jagung;Jamur Upas;Terdapat bercak pada daun, Daun mengalami kelayuan, Pertumbuhan tanaman terhambat;Jamur patogen batang;Sanitasi kebun dan penggunaan fungisida
+kaggle;Jagung;Karat Daun;Daun berwarna kuning, Daun mengalami kelayuan, Batang mengalami pembusukan;jamur Puccinia sorghi;varietas tahan, rotasi tanaman, sanitasi kebun, fungisida
+kaggle;Jagung;Embun Tepung;Terdapat bercak pada daun, Daun mengalami kelayuan, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;jamur Erysiphe spp.;menjaga sirkulasi udara, rotasi tanaman, sanitasi kebun, fungisida
+kaggle;Jagung;Busuk Hitam;Daun tetap hijau, Terdapat bercak pada daun, Daun mengalami kelayuan, Batang mengalami pembusukan;jamur Alternaria spp.;sanitasi tanaman, rotasi tanaman, varietas tahan, fungisida
+kaggle;Jagung;Busuk Akar;Daun tetap hijau, Terdapat bercak pada daun, Daun mengalami kelayuan, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;jamur Rhizoctonia solani;rotasi tanaman, drainase baik, sanitasi lahan, fungisida
+kaggle;Jagung;Busuk Akar Phytophthora;Daun Berwarna coklat;jamur air Phytophthora spp.;drainase baik, rotasi tanaman, sanitasi lahan, fungisida
+kaggle;Jagung;Busuk Buah Botrytis;Daun tetap hijau, Terdapat bercak pada daun, Daun mengalami kelayuan, Pertumbuhan tanaman terhambat;jamur Botrytis cinerea;sanitasi tanaman, rotasi tanaman, fungisida
+kaggle;Jagung;Karat Daun;Daun tetap hijau, Terdapat bercak pada daun, Batang mengalami pembusukan;jamur Puccinia sorghi;varietas tahan, sanitasi lahan, fungisida
+kaggle;Jagung;Layu Fusarium;Terdapat bercak pada daun, Daun mengalami kelayuan;jamur Fusarium verticillioides;rotasi tanaman, benih sehat, fungisida
+kaggle;Jagung;Embun Tepung;Daun tetap hijau, Terdapat bercak pada daun, Daun mengalami kelayuan, Batang mengalami pembusukan;Jamur Erysiphe spp.;Gunakan varietas tahan, sanitasi lahan, pengaturan jarak tanam, aplikasi fungisida
+kaggle;Jagung;Layu Bakteri;Daun berwarna kuning, Terdapat bercak pada daun, Daun mengalami kelayuan, Pertumbuhan tanaman terhambat;Bakteri Erwinia spp.;Gunakan benih sehat, rotasi tanaman, sanitasi lahan, pengendalian vektor
+kaggle;Jagung;Layu Fusarium;Daun berwarna kuning, Terdapat bercak pada daun, Daun mengalami kelayuan, Batang mengalami pembusukan;Jamur Fusarium verticillioides;Rotasi tanaman, benih sehat, fungisida
+kaggle;Jagung;Busuk Lunak;Daun berwarna kuning, Terdapat bercak pada daun, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;Bakteri Erwinia spp.;Drainase baik, sanitasi tanaman, bakterisida
+kaggle;Jagung;Embun Tepung;Daun tetap hijau, Terdapat bercak pada daun, Daun mengalami kelayuan, Batang mengalami pembusukan;Jamur Erysiphe spp.;Varietas tahan, fungisida
+kaggle;Jagung;Layu Bakteri;Daun berwarna kuning, Terdapat bercak pada daun, Daun mengalami kelayuan, Pertumbuhan tanaman terhambat;Bakteri Erwinia spp.;Benih sehat, sanitasi lahan
+kaggle;Jagung;Layu Fusarium;Daun berwarna kuning, Terdapat bercak pada daun, Pertumbuhan tanaman terhambat;Jamur Fusarium verticillioides;rotasi tanaman, varietas tahan, pengolahan tanah baik, agen hayati Trichoderma, fungisida benomil atau mankozeb
+kaggle;Jagung;Embun Tepung;Daun tetap hijau, Terdapat bercak pada daun, Pertumbuhan tanaman terhambat;Jamur Erysiphe spp.;varietas tahan, pengurangan kelembaban, fungisida sulfur
+manual;Jagung;Blas;Daun bercak coklat berbentuk belah ketupat;Jamur Magnaporthe oryzae;Gunakan varietas tahan, fungisida, perbaikan drainase
+manual;Jagung;Wereng Batang Coklat;Daun menguning lalu mengering;Nilaparvata lugens;Gunakan insektisida selektif, varietas tahan
+manual;Jagung;Ulat Grayak;Daun berlubang tidak beraturan;Spodoptera litura;Gunakan insektisida biologis, perangkap feromon
+manual;Jagung;Layu Fusarium;Daun layu dari bawah ke atas;Fusarium oxysporum;Solarisasi tanah, fungisida, varietas tahan
+manual;Jagung;Antraknosa;Buah muncul bercak hitam cekung;Colletotrichum capsici;Fungisida, panen cepat, rotasi tanaman
+manual;Jagung;Busuk Buah;Buah coklat kehitaman, busuk lembek;Phytophthora palmivora;Pangkas buah sakit, fungisida, drainase baik
+manual;Jagung;Karat Daun;Daun bercak kuning-oranye;Hemileia vastatrix;Fungisida tembaga, pangkas daun sakit
+manual;Jagung;Virus Kuning;Daun keriting, kerdil, berubah kuning;Virus Gemini via kutu kebul;Kendalikan kutu kebul, varietas tahan
+manual;Jagung;Busuk Akar;Akar membusuk, tanaman layu mendadak;Phytophthora spp.;Perbaiki drainase, fungisida tanah
+manual;Jagung;Penggerek Buah;Buah berlubang kecil, biji rusak;Hypothenemus hampei;Perangkap serangga, insektisida nabati
+manual;Jeruk;Blas;Daun bercak coklat berbentuk belah ketupat;Jamur Magnaporthe oryzae;Gunakan varietas tahan, fungisida, perbaikan drainase
+manual;Jeruk;Wereng Batang Coklat;Daun menguning lalu mengering;Nilaparvata lugens;Gunakan insektisida selektif, varietas tahan
+manual;Jeruk;Ulat Grayak;Daun berlubang tidak beraturan;Spodoptera litura;Gunakan insektisida biologis, perangkap feromon
+manual;Jeruk;Layu Fusarium;Daun layu dari bawah ke atas;Fusarium oxysporum;Solarisasi tanah, fungisida, varietas tahan
+manual;Jeruk;Antraknosa;Buah muncul bercak hitam cekung;Colletotrichum capsici;Fungisida, panen cepat, rotasi tanaman
+manual;Jeruk;Busuk Buah;Buah coklat kehitaman, busuk lembek;Phytophthora palmivora;Pangkas buah sakit, fungisida, drainase baik
+manual;Jeruk;Karat Daun;Daun bercak kuning-oranye;Hemileia vastatrix;Fungisida tembaga, pangkas daun sakit
+manual;Jeruk;Virus Kuning;Daun keriting, kerdil, berubah kuning;Virus Gemini via kutu kebul;Kendalikan kutu kebul, varietas tahan
+manual;Jeruk;Busuk Akar;Akar membusuk, tanaman layu mendadak;Phytophthora spp.;Perbaiki drainase, fungisida tanah
+manual;Jeruk;Penggerek Buah;Buah berlubang kecil, biji rusak;Hypothenemus hampei;Perangkap serangga, insektisida nabati
+kaggle;Kacang Tanah;Antraknosa;Daun berwarna kuning, Terdapat bercak pada daun, Daun mengalami kelayuan, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;Jamur Colletotrichum gloeosporioides;Sanitasi kebun dan fungisida
+kaggle;Kacang Tanah;Karat Daun;Daun tetap hijau, Terdapat bercak pada daun, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;Jamur Puccinia spp.;Pemangkasan daun sakit dan fungisida
+kaggle;Kacang Tanah;Layu Fusarium;Daun berwarna kuning, Daun mengalami kelayuan;Jamur Fusarium oxysporum;Rotasi tanaman
+kaggle;Kacang Tanah;Busuk Akar;Daun tetap hijau, Daun mengalami kelayuan, Batang mengalami pembusukan;Jamur tanah Rhizoctonia solani;Perbaiki drainase
+kaggle;Kacang Tanah;Busuk Akar;Daun berwarna kuning, Terdapat bercak pada daun, Daun mengalami kelayuan, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;jamur Rhizoctonia solani;rotasi tanaman, sanitasi lahan, perbaikan drainase tanah, fungisida
+kaggle;Kacang Tanah;Hawar Daun Bakteri;Pertumbuhan tanaman terhambat;bakteri Xanthomonas spp.;sanitasi kebun, penggunaan benih sehat, rotasi tanaman, bakterisida
+kaggle;Kacang Tanah;Jamur Upas;Daun berwarna kuning, Daun mengalami kelayuan, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;jamur Upasia salmonicolor;pemangkasan bagian terinfeksi, sanitasi kebun, menjaga kelembapan, fungisida
+kaggle;Kacang Tanah;Jamur Upas;Daun tetap hijau;jamur Upasia salmonicolor;pemangkasan bagian terinfeksi, sanitasi kebun, menjaga kelembapan, fungisida
+kaggle;Kacang Tanah;Karat Daun;Daun tetap hijau, Daun mengalami kelayuan, Batang mengalami pembusukan;jamur Puccinia arachidis;rotasi tanaman, sanitasi kebun, varietas tahan, fungisida
+kaggle;Kacang Tanah;Embun Tepung;Daun tetap hijau, Daun mengalami kelayuan, Batang mengalami pembusukan;jamur Erysiphe arachidis;sirkulasi udara baik, sanitasi kebun, varietas tahan, fungisida
+kaggle;Kacang Tanah;Layu Fusarium;Daun tetap hijau, Terdapat bercak pada daun, Daun mengalami kelayuan;jamur Fusarium oxysporum;rotasi tanaman, benih sehat, sanitasi lahan, fungisida
+kaggle;Kacang Tanah;Busuk Akar Phytophthora;Daun mengalami kelayuan;jamur air Phytophthora spp.;drainase baik, rotasi tanaman, sanitasi kebun, fungisida
+kaggle;Kacang Tanah;Busuk Lunak;Daun mengalami kelayuan, Pertumbuhan tanaman terhambat;bakteri Pectobacterium carotovorum;sanitasi kebun, pengaturan kelembapan, bakterisida
+kaggle;Kacang Tanah;Busuk Akar Phytophthora;Daun berwarna kuning, Daun mengalami kelayuan;jamur air Phytophthora spp.;drainase baik, rotasi tanaman, sanitasi lahan, fungisida
+kaggle;Kacang Tanah;Busuk Hitam;Daun berwarna kuning;Jamur Aspergillus niger;Gunakan benih sehat, rotasi tanaman, sanitasi lahan
+kaggle;Kacang Tanah;Karat Daun;Batang mengalami pembusukan;Jamur Puccinia arachidis;Varietas tahan, fungisida
+kaggle;Kacang Tanah;Busuk Hitam;Daun mengalami kelayuan;Jamur Aspergillus niger;rotasi tanaman, penggunaan benih sehat, perbaikan drainase tanah, fungisida tembaga atau mankozeb, sanitasi lahan
+kaggle;Kacang Tanah;Busuk Hitam;Terdapat bercak pada daun, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;Jamur Aspergillus niger;rotasi tanaman, benih sehat, perbaikan drainase, fungisida tembaga
+kaggle;Kacang Tanah;Busuk Buah Botrytis;Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;Jamur Botrytis cinerea;sanitasi tanaman sakit, pengurangan kelembaban, fungisida iprodione
+manual;Kacang Tanah;Blas;Daun bercak coklat berbentuk belah ketupat;Jamur Magnaporthe oryzae;Gunakan varietas tahan, fungisida, perbaikan drainase
+manual;Kacang Tanah;Wereng Batang Coklat;Daun menguning lalu mengering;Nilaparvata lugens;Gunakan insektisida selektif, varietas tahan
+manual;Kacang Tanah;Ulat Grayak;Daun berlubang tidak beraturan;Spodoptera litura;Gunakan insektisida biologis, perangkap feromon
+manual;Kacang Tanah;Layu Fusarium;Daun layu dari bawah ke atas;Fusarium oxysporum;Solarisasi tanah, fungisida, varietas tahan
+manual;Kacang Tanah;Antraknosa;Buah muncul bercak hitam cekung;Colletotrichum capsici;Fungisida, panen cepat, rotasi tanaman
+manual;Kacang Tanah;Busuk Buah;Buah coklat kehitaman, busuk lembek;Phytophthora palmivora;Pangkas buah sakit, fungisida, drainase baik
+manual;Kacang Tanah;Karat Daun;Daun bercak kuning-oranye;Hemileia vastatrix;Fungisida tembaga, pangkas daun sakit
+manual;Kacang Tanah;Virus Kuning;Daun keriting, kerdil, berubah kuning;Virus Gemini via kutu kebul;Kendalikan kutu kebul, varietas tahan
+manual;Kacang Tanah;Busuk Akar;Akar membusuk, tanaman layu mendadak;Phytophthora spp.;Perbaiki drainase, fungisida tanah
+manual;Kacang Tanah;Penggerek Buah;Buah berlubang kecil, biji rusak;Hypothenemus hampei;Perangkap serangga, insektisida nabati
+manual;Kakao;Blas;Daun bercak coklat berbentuk belah ketupat;Jamur Magnaporthe oryzae;Gunakan varietas tahan, fungisida, perbaikan drainase
+manual;Kakao;Wereng Batang Coklat;Daun menguning lalu mengering;Nilaparvata lugens;Gunakan insektisida selektif, varietas tahan
+manual;Kakao;Ulat Grayak;Daun berlubang tidak beraturan;Spodoptera litura;Gunakan insektisida biologis, perangkap feromon
+manual;Kakao;Layu Fusarium;Daun layu dari bawah ke atas;Fusarium oxysporum;Solarisasi tanah, fungisida, varietas tahan
+manual;Kakao;Antraknosa;Buah muncul bercak hitam cekung;Colletotrichum capsici;Fungisida, panen cepat, rotasi tanaman
+manual;Kakao;Busuk Buah;Buah coklat kehitaman, busuk lembek;Phytophthora palmivora;Pangkas buah sakit, fungisida, drainase baik
+manual;Kakao;Karat Daun;Daun bercak kuning-oranye;Hemileia vastatrix;Fungisida tembaga, pangkas daun sakit
+manual;Kakao;Virus Kuning;Daun keriting, kerdil, berubah kuning;Virus Gemini via kutu kebul;Kendalikan kutu kebul, varietas tahan
+manual;Kakao;Busuk Akar;Akar membusuk, tanaman layu mendadak;Phytophthora spp.;Perbaiki drainase, fungisida tanah
+manual;Kakao;Penggerek Buah;Buah berlubang kecil, biji rusak;Hypothenemus hampei;Perangkap serangga, insektisida nabati
+manual;Kedelai;Blas;Daun bercak coklat berbentuk belah ketupat;Jamur Magnaporthe oryzae;Gunakan varietas tahan, fungisida, perbaikan drainase
+manual;Kedelai;Wereng Batang Coklat;Daun menguning lalu mengering;Nilaparvata lugens;Gunakan insektisida selektif, varietas tahan
+manual;Kedelai;Ulat Grayak;Daun berlubang tidak beraturan;Spodoptera litura;Gunakan insektisida biologis, perangkap feromon
+manual;Kedelai;Layu Fusarium;Daun layu dari bawah ke atas;Fusarium oxysporum;Solarisasi tanah, fungisida, varietas tahan
+manual;Kedelai;Antraknosa;Buah muncul bercak hitam cekung;Colletotrichum capsici;Fungisida, panen cepat, rotasi tanaman
+manual;Kedelai;Busuk Buah;Buah coklat kehitaman, busuk lembek;Phytophthora palmivora;Pangkas buah sakit, fungisida, drainase baik
+manual;Kedelai;Karat Daun;Daun bercak kuning-oranye;Hemileia vastatrix;Fungisida tembaga, pangkas daun sakit
+manual;Kedelai;Virus Kuning;Daun keriting, kerdil, berubah kuning;Virus Gemini via kutu kebul;Kendalikan kutu kebul, varietas tahan
+manual;Kedelai;Busuk Akar;Akar membusuk, tanaman layu mendadak;Phytophthora spp.;Perbaiki drainase, fungisida tanah
+manual;Kedelai;Penggerek Buah;Buah berlubang kecil, biji rusak;Hypothenemus hampei;Perangkap serangga, insektisida nabati
+manual;Kelapa Sawit;Blas;Daun bercak coklat berbentuk belah ketupat;Jamur Magnaporthe oryzae;Gunakan varietas tahan, fungisida, perbaikan drainase
+manual;Kelapa Sawit;Wereng Batang Coklat;Daun menguning lalu mengering;Nilaparvata lugens;Gunakan insektisida selektif, varietas tahan
+manual;Kelapa Sawit;Ulat Grayak;Daun berlubang tidak beraturan;Spodoptera litura;Gunakan insektisida biologis, perangkap feromon
+manual;Kelapa Sawit;Layu Fusarium;Daun layu dari bawah ke atas;Fusarium oxysporum;Solarisasi tanah, fungisida, varietas tahan
+manual;Kelapa Sawit;Antraknosa;Buah muncul bercak hitam cekung;Colletotrichum capsici;Fungisida, panen cepat, rotasi tanaman
+manual;Kelapa Sawit;Busuk Buah;Buah coklat kehitaman, busuk lembek;Phytophthora palmivora;Pangkas buah sakit, fungisida, drainase baik
+manual;Kelapa Sawit;Karat Daun;Daun bercak kuning-oranye;Hemileia vastatrix;Fungisida tembaga, pangkas daun sakit
+manual;Kelapa Sawit;Virus Kuning;Daun keriting, kerdil, berubah kuning;Virus Gemini via kutu kebul;Kendalikan kutu kebul, varietas tahan
+manual;Kelapa Sawit;Busuk Akar;Akar membusuk, tanaman layu mendadak;Phytophthora spp.;Perbaiki drainase, fungisida tanah
+manual;Kelapa Sawit;Penggerek Buah;Buah berlubang kecil, biji rusak;Hypothenemus hampei;Perangkap serangga, insektisida nabati
+kaggle;Kentang;Busuk Hitam;Daun tetap hijau, Terdapat bercak pada daun, Pertumbuhan tanaman terhambat;Bakteri Xanthomonas campestris;Gunakan benih sehat, lakukan rotasi tanaman, sanitasi lahan, dan aplikasi bakterisida
+kaggle;Kentang;Bercak Daun;Daun tetap hijau, Daun mengalami kelayuan;Jamur Alternaria solani;Penyemprotan fungisida dan sanitasi daun yang terinfeksi
+kaggle;Kentang;Bercak Daun Cercospora;Daun mengalami kelayuan, Batang mengalami pembusukan;Jamur Cercospora spp.;Fungisida dan rotasi tanaman
+kaggle;Kentang;Busuk Akar Phytophthora;Daun tetap hijau, Terdapat bercak pada daun, Daun mengalami kelayuan, Batang mengalami pembusukan;Jamur Phytophthora infestans;Fungisida sistemik dan drainase baik
+kaggle;Kentang;Embun Tepung;Daun tetap hijau, Terdapat bercak pada daun, Pertumbuhan tanaman terhambat;Jamur Erysiphe spp.;Gunakan fungisida
+kaggle;Kentang;Layu Fusarium;Daun berwarna kuning, Daun mengalami kelayuan, Batang mengalami pembusukan;jamur Fusarium oxysporum;rotasi tanaman, penggunaan benih sehat, perbaikan drainase tanah, fungisida
+kaggle;Kentang;Hawar Daun Bakteri;Terdapat bercak pada daun, Daun mengalami kelayuan, Pertumbuhan tanaman terhambat;bakteri Xanthomonas spp.;sanitasi kebun, penggunaan bibit sehat, rotasi tanaman, bakterisida
+kaggle;Kentang;Busuk Buah Botrytis;Terdapat bercak pada daun, Daun mengalami kelayuan, Pertumbuhan tanaman terhambat;jamur Botrytis cinerea;sanitasi kebun, rotasi tanaman, pengaturan kelembapan, fungisida
+kaggle;Kentang;Bercak Daun Cercospora;Daun berwarna kuning, Terdapat bercak pada daun;jamur Cercospora spp.;sanitasi daun sakit, rotasi tanaman, fungisida
+kaggle;Kentang;Antraknosa;Daun berwarna kuning, Terdapat bercak pada daun, Batang mengalami pembusukan;Jamur Colletotrichum coccodes;Rotasi tanaman, sanitasi lahan, fungisida
+kaggle;Kentang;Busuk Akar Phytophthora;Terdapat bercak pada daun, Daun mengalami kelayuan, Batang mengalami pembusukan;Jamur Phytophthora infestans;Rotasi tanaman, fungisida
+kaggle;Kentang;Layu Bakteri;Daun tetap hijau, Daun mengalami kelayuan, Batang mengalami pembusukan;Bakteri Ralstonia solanacearum;rotasi tanaman non-solanaceae, bibit sehat, sanitasi alat pertanian, perbaikan drainase, eradikasi tanaman terinfeksi
+kaggle;Kentang;Hawar Daun Bakteri;Daun mengalami kelayuan, Batang mengalami pembusukan;Bakteri Xanthomonas campestris;sanitasi tanaman sakit, rotasi tanaman, bakterisida tembaga, pengendalian kelembaban
+kaggle;Kentang;Hawar Daun Bakteri;Daun tetap hijau, Terdapat bercak pada daun;Bakteri Xanthomonas spp.;sanitasi tanaman sakit, rotasi tanaman, bakterisida tembaga
+kaggle;Kentang;Jamur Upas;Daun berwarna kuning, Terdapat bercak pada daun, Daun mengalami kelayuan, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;Jamur Upasia salmonicolor;pemangkasan bagian sakit, sanitasi kebun, fungisida tembaga
+kaggle;Kentang;Busuk Lunak;Pertumbuhan tanaman terhambat;Bakteri Erwinia carotovora;sanitasi kebun, penyimpanan baik, bakterisida tembaga
+kaggle;Kentang;Busuk Hitam;Daun berwarna kuning, Daun mengalami kelayuan;Jamur Aspergillus niger;sanitasi kebun, rotasi tanaman, bibit sehat, fungisida tembaga
+manual;Kentang;Blas;Daun bercak coklat berbentuk belah ketupat;Jamur Magnaporthe oryzae;Gunakan varietas tahan, fungisida, perbaikan drainase
+manual;Kentang;Wereng Batang Coklat;Daun menguning lalu mengering;Nilaparvata lugens;Gunakan insektisida selektif, varietas tahan
+manual;Kentang;Ulat Grayak;Daun berlubang tidak beraturan;Spodoptera litura;Gunakan insektisida biologis, perangkap feromon
+manual;Kentang;Layu Fusarium;Daun layu dari bawah ke atas;Fusarium oxysporum;Solarisasi tanah, fungisida, varietas tahan
+manual;Kentang;Antraknosa;Buah muncul bercak hitam cekung;Colletotrichum capsici;Fungisida, panen cepat, rotasi tanaman
+manual;Kentang;Busuk Buah;Buah coklat kehitaman, busuk lembek;Phytophthora palmivora;Pangkas buah sakit, fungisida, drainase baik
+manual;Kentang;Karat Daun;Daun bercak kuning-oranye;Hemileia vastatrix;Fungisida tembaga, pangkas daun sakit
+manual;Kentang;Virus Kuning;Daun keriting, kerdil, berubah kuning;Virus Gemini via kutu kebul;Kendalikan kutu kebul, varietas tahan
+manual;Kentang;Busuk Akar;Akar membusuk, tanaman layu mendadak;Phytophthora spp.;Perbaiki drainase, fungisida tanah
+manual;Kentang;Penggerek Buah;Buah berlubang kecil, biji rusak;Hypothenemus hampei;Perangkap serangga, insektisida nabati
+manual;Ketimun;Blas;Daun bercak coklat berbentuk belah ketupat;Jamur Magnaporthe oryzae;Gunakan varietas tahan, fungisida, perbaikan drainase
+manual;Ketimun;Wereng Batang Coklat;Daun menguning lalu mengering;Nilaparvata lugens;Gunakan insektisida selektif, varietas tahan
+manual;Ketimun;Ulat Grayak;Daun berlubang tidak beraturan;Spodoptera litura;Gunakan insektisida biologis, perangkap feromon
+manual;Ketimun;Layu Fusarium;Daun layu dari bawah ke atas;Fusarium oxysporum;Solarisasi tanah, fungisida, varietas tahan
+manual;Ketimun;Antraknosa;Buah muncul bercak hitam cekung;Colletotrichum capsici;Fungisida, panen cepat, rotasi tanaman
+manual;Ketimun;Busuk Buah;Buah coklat kehitaman, busuk lembek;Phytophthora palmivora;Pangkas buah sakit, fungisida, drainase baik
+manual;Ketimun;Karat Daun;Daun bercak kuning-oranye;Hemileia vastatrix;Fungisida tembaga, pangkas daun sakit
+manual;Ketimun;Virus Kuning;Daun keriting, kerdil, berubah kuning;Virus Gemini via kutu kebul;Kendalikan kutu kebul, varietas tahan
+manual;Ketimun;Busuk Akar;Akar membusuk, tanaman layu mendadak;Phytophthora spp.;Perbaiki drainase, fungisida tanah
+manual;Ketimun;Penggerek Buah;Buah berlubang kecil, biji rusak;Hypothenemus hampei;Perangkap serangga, insektisida nabati
+kaggle;Kopi;Antraknosa;Daun berwarna kuning, Terdapat bercak pada daun, Pertumbuhan tanaman terhambat;Jamur Colletotrichum coffeanum;Sanitasi kebun dan penyemprotan fungisi
+kaggle;Kopi;Jamur Upas;Daun berwarna kuning, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;Jamur Upasia salmonicolor;Pangkas cabang terinfeksi dan fungisida
+kaggle;Kopi;Busuk Akar;Terdapat bercak pada daun, Daun mengalami kelayuan;Jamur tanah seperti Rhizoctonia solani;Perbaiki drainase tanah, gunakan fungisida tanah
+kaggle;Kopi;Layu Bakter;Daun berwarna kuning, Terdapat bercak pada daun, Daun mengalami kelayuan, Pertumbuhan tanaman terhambat;bakteri Ralstonia solanacearum;penggunaan bibit sehat, sanitasi lahan, rotasi tanaman, bakterisida
+kaggle;Kopi;Embun Tepung;Daun tetap hijau, Daun mengalami kelayuan, Pertumbuhan tanaman terhambat;jamur Oidium spp.;pemangkasan daun sakit, menjaga sirkulasi udara, sanitasi kebun, fungisida
+kaggle;Kopi;Busuk Akar Phytophthora;Terdapat bercak pada daun, Daun mengalami kelayuan, Pertumbuhan tanaman terhambat;jamur air Phytophthora spp.;drainase baik, sanitasi kebun, fungisida
+kaggle;Kopi;Busuk Akar Phytophthora;Daun berwarna kuning, Terdapat bercak pada daun, Pertumbuhan tanaman terhambat;jamur air Phytophthora spp.;drainase baik, sanitasi kebun, fungisida
+kaggle;Kopi;Layu Fusarium;Daun berwarna kuning, Terdapat bercak pada daun;Jamur Fusarium spp.;Sanitasi tanaman, rotasi tanaman, fungisida
+kaggle;Kopi;Busuk Lunak;Terdapat bercak pada daun;Bakteri Erwinia spp.;Sanitasi tanaman, drainase baik
+kaggle;Kopi;Layu Bakteri;Daun tetap hijau, Terdapat bercak pada daun, Daun mengalami kelayuan, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;Bakteri Pseudomonas syringae;sanitasi kebun, pemangkasan bagian sakit, bibit sehat, perbaikan drainase, bakterisida tembaga
+kaggle;Kopi;Busuk Akar Phytophthora;Daun tetap hijau, Daun mengalami kelayuan, Batang mengalami pembusukan;Jamur Phytophthora palmivora;perbaikan drainase tanah, sanitasi kebun, penggunaan bibit sehat, fungisida metalaksil atau fosetil-Al
+kaggle;Kopi;Jamur Upas;Daun berwarna kuning, Terdapat bercak pada daun, Pertumbuhan tanaman terhambat;Jamur Upasia salmonicolor;pemangkasan cabang terinfeksi, sanitasi kebun, fungisida tembaga, pengaturan kelembaban kebun
+kaggle;Kopi;Bercak Daun;Terdapat bercak pada daun, Pertumbuhan tanaman terhambat;Jamur Cercospora coffeicola;sanitasi daun sakit, pengaturan naungan, fungisida mankozeb atau klorotalonil
+manual;Kopi;Blas;Daun bercak coklat berbentuk belah ketupat;Jamur Magnaporthe oryzae;Gunakan varietas tahan, fungisida, perbaikan drainase
+manual;Kopi;Wereng Batang Coklat;Daun menguning lalu mengering;Nilaparvata lugens;Gunakan insektisida selektif, varietas tahan
+manual;Kopi;Ulat Grayak;Daun berlubang tidak beraturan;Spodoptera litura;Gunakan insektisida biologis, perangkap feromon
+manual;Kopi;Layu Fusarium;Daun layu dari bawah ke atas;Fusarium oxysporum;Solarisasi tanah, fungisida, varietas tahan
+manual;Kopi;Antraknosa;Buah muncul bercak hitam cekung;Colletotrichum capsici;Fungisida, panen cepat, rotasi tanaman
+manual;Kopi;Busuk Buah;Buah coklat kehitaman, busuk lembek;Phytophthora palmivora;Pangkas buah sakit, fungisida, drainase baik
+manual;Kopi;Karat Daun;Daun bercak kuning-oranye;Hemileia vastatrix;Fungisida tembaga, pangkas daun sakit
+manual;Kopi;Virus Kuning;Daun keriting, kerdil, berubah kuning;Virus Gemini via kutu kebul;Kendalikan kutu kebul, varietas tahan
+manual;Kopi;Busuk Akar;Akar membusuk, tanaman layu mendadak;Phytophthora spp.;Perbaiki drainase, fungisida tanah
+manual;Kopi;Penggerek Buah;Buah berlubang kecil, biji rusak;Hypothenemus hampei;Perangkap serangga, insektisida nabati
+kaggle;Kubis;Busuk Akar;Daun tetap hijau, Daun mengalami kelayuan, Pertumbuhan tanaman terhambat;Jamur Rhizoctonia solani;Drainase tanah yang baik dan fungisida
+kaggle;Kubis;Antraknosa;Terdapat bercak pada daun, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;Jamur Colletotrichum spp.;Sanitasi kebun dan fungisida
+kaggle;Kubis;Busuk Lunak;Daun berwarna kuning, Terdapat bercak pada daun, Daun mengalami kelayuan;Bakteri Pectobacterium carotovorum;Gunakan varietas tahan dan bakterisida
+kaggle;Kubis;Karat Daun;Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;Jamur karat daun;Gunakan fungisida dan rotasi tanaman
+kaggle;Kubis;Busuk Akar Phytophthora;Daun tetap hijau, Pertumbuhan tanaman terhambat;Jamur Phytophthora spp.;Perbaiki drainase tanah
+kaggle;Kubis;Embun Tepung;Daun tetap hijau, Daun mengalami kelayuan, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;jamur Erysiphe cruciferarum;menjaga sirkulasi udara, sanitasi kebun, varietas tahan, fungisida sulfur
+kaggle;Kubis;Bercak Daun;Daun tetap hijau, Terdapat bercak pada daun, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;jamur Alternaria brassicae;sanitasi daun sakit, rotasi tanaman, varietas tahan, fungisida
+kaggle;Kubis;Layu Bakteri;Daun berwarna kuning, Terdapat bercak pada daun;bakteri Xanthomonas campestris;benih sehat, sanitasi kebun, rotasi tanaman, bakterisida
+kaggle;Kubis;Busuk Lunak;Terdapat bercak pada daun, Batang mengalami pembusukan;bakteri Pectobacterium carotovorum;sanitasi kebun, pengaturan kelembapan, bakterisida
+kaggle;Kubis;Busuk Akar Phytophthora;Daun berwarna kuning, Daun mengalami kelayuan;jamur air Phytophthora spp.;drainase baik, rotasi tanaman, fungisida
+kaggle;Kubis;Antraknosa;Terdapat bercak pada daun, Daun mengalami kelayuan, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;jamur Colletotrichum spp.;sanitasi kebun, rotasi tanaman, fungisida
+kaggle;Kubis;Hawar Daun Bakteri;Daun tetap hijau, Terdapat bercak pada daun, Daun mengalami kelayuan, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;Bakteri Xanthomonas campestris;Benih sehat, sanitasi tanaman
+kaggle;Kubis;Busuk Hitam;Daun berwarna kuning, Daun mengalami kelayuan, Batang mengalami pembusukan;Bakteri Xanthomonas campestris;benih bebas patogen, sanitasi lahan, rotasi tanaman, bakterisida tembaga
+kaggle;Mangga;Karat Daun;Daun tetap hijau, Terdapat bercak pada daun, Daun mengalami kelayuan;Jamur Puccinia spp.;Pemangkasan daun terinfeksi, sanitasi kebun, meningkatkan sirkulasi udara, dan penyemprotan fungisida
+kaggle;Mangga;Hawar Daun Bakteri;Daun berwarna kuning;Bakteri Xanthomonas oryzae;Gunakan varietas tahan penyakit, pengaturan air, dan penyemprotan bakterisida
+kaggle;Mangga;Busuk Lunak;Daun tetap hijau, Pertumbuhan tanaman terhambat;Bakteri Pectobacterium carotovorum;Kurangi kelembaban dan sanitasi tanaman
+kaggle;Mangga;Karat Daun;Terdapat bercak pada daun, Batang mengalami pembusukan;Jamur Puccinia spp.;Fungisida dan sanitasi daun
+kaggle;Mangga;Busuk Akar;Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;Jamur Rhizoctonia solani;Perbaiki drainase tanah
+kaggle;Mangga;Jamur Upas;Daun berwarna kuning, Terdapat bercak pada daun;Jamur Corticium salmonicolor;Pangkas cabang terinfeksi, jaga sirkulasi udara, semprot fungisida tembaga
+kaggle;Mangga;Busuk Buah Botrytis;Terdapat bercak pada daun, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;Jamur Botrytis cinerea;Buang buah terinfeksi, semprot fungisida
+kaggle;Mangga;Jamur Upas;Daun berwarna kuning, Batang mengalami pembusukan;Jamur Corticium salmonicolor;Pangkas cabang sakit dan semprot fungisida
+kaggle;Mangga;Busuk Akar Phytophthora;Daun berwarna kuning, Terdapat bercak pada daun, Daun mengalami kelayuan, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;Jamur air Phytophthora spp.;Perbaiki drainase tanah dan gunakan fungisida sistemik
+kaggle;Mangga;Busuk Akar Phytophthora;Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;Jamur Phytophthora spp.;Perbaiki drainase dan gunakan fungisida
+kaggle;Mangga;Karat Daun;Daun mengalami kelayuan, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;Jamur karat daun;Semprot fungisida
+kaggle;Mangga;Embun Tepung;Terdapat bercak pada daun, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;Jamur Oidium spp.;Gunakan fungisida sulfur
+kaggle;Mangga;Karat Daun;Terdapat bercak pada daun, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;jamur Puccinia spp.;pemangkasan daun sakit, sanitasi kebun, peningkatan sirkulasi udara, fungisida
+kaggle;Mangga;Antraknosa;Daun berwarna kuning, Terdapat bercak pada daun, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;jamur Colletotrichum gloeosporioides;pemangkasan bagian sakit, sanitasi kebun, menjaga kelembapan, fungisida
+kaggle;Mangga;Bercak Daun;Daun berwarna kuning, Pertumbuhan tanaman terhambat;jamur Cercospora mangiferae;pemangkasan daun sakit, sanitasi kebun, rotasi tanaman, fungisida
+kaggle;Mangga;Antraknosa;Daun tetap hijau, Daun mengalami kelayuan;jamur Colletotrichum gloeosporioides;pemangkasan daun sakit, sanitasi kebun, menjaga kelembapan, fungisida
+kaggle;Mangga;Busuk Lunak;Daun tetap hijau, Batang mengalami pembusukan;bakteri Pectobacterium carotovorum;sanitasi kebun, pengaturan kelembapan, penggunaan bibit sehat, bakterisida
+kaggle;Mangga;Layu Bakteri;Daun tetap hijau, Terdapat bercak pada daun, Batang mengalami pembusukan;bakteri Ralstonia solanacearum;bibit sehat, sanitasi kebun, rotasi tanaman, bakterisida
+kaggle;Mangga;Busuk Hitam;Batang mengalami pembusukan;jamur Alternaria spp.;sanitasi tanaman sakit, pemangkasan, fungisida, rotasi tanaman
+kaggle;Mangga;Antraknosa;Batang mengalami pembusukan;Jamur Colletotrichum gloeosporioides;Sanitasi tanaman, fungisida
+kaggle;Mangga;Karat Daun;Daun tetap hijau, Daun mengalami kelayuan, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;Jamur Puccinia mangiferae;sanitasi daun terinfeksi, pemangkasan, fungisida mankozeb
+kaggle;Mangga;Busuk Akar Phytophthora;Daun mengalami kelayuan;Jamur Phytophthora palmivora;perbaikan drainase tanah, sanitasi kebun, fungisida fosetil-Al
+kaggle;Mangga;Busuk Akar Phytophthora;Daun berwarna kuning, Pertumbuhan tanaman terhambat;Jamur Phytophthora palmivora;perbaikan drainase tanah, sanitasi kebun, fungisida fosetil-Al
+manual;Mangga;Blas;Daun bercak coklat berbentuk belah ketupat;Jamur Magnaporthe oryzae;Gunakan varietas tahan, fungisida, perbaikan drainase
+manual;Mangga;Wereng Batang Coklat;Daun menguning lalu mengering;Nilaparvata lugens;Gunakan insektisida selektif, varietas tahan
+manual;Mangga;Ulat Grayak;Daun berlubang tidak beraturan;Spodoptera litura;Gunakan insektisida biologis, perangkap feromon
+manual;Mangga;Layu Fusarium;Daun layu dari bawah ke atas;Fusarium oxysporum;Solarisasi tanah, fungisida, varietas tahan
+manual;Mangga;Antraknosa;Buah muncul bercak hitam cekung;Colletotrichum capsici;Fungisida, panen cepat, rotasi tanaman
+manual;Mangga;Busuk Buah;Buah coklat kehitaman, busuk lembek;Phytophthora palmivora;Pangkas buah sakit, fungisida, drainase baik
+manual;Mangga;Karat Daun;Daun bercak kuning-oranye;Hemileia vastatrix;Fungisida tembaga, pangkas daun sakit
+manual;Mangga;Virus Kuning;Daun keriting, kerdil, berubah kuning;Virus Gemini via kutu kebul;Kendalikan kutu kebul, varietas tahan
+manual;Mangga;Busuk Akar;Akar membusuk, tanaman layu mendadak;Phytophthora spp.;Perbaiki drainase, fungisida tanah
+manual;Mangga;Penggerek Buah;Buah berlubang kecil, biji rusak;Hypothenemus hampei;Perangkap serangga, insektisida nabati
+kaggle;Melon;Antraknosa;Daun berwarna kuning, Daun mengalami kelayuan, Batang mengalami pembusukan;Jamur Colletotrichum gloeosporioides;Penyemprotan fungisida, sanitasi kebun, dan pemangkasan bagian tanaman yang terinfeksi
+kaggle;Melon;Bercak Daun;Daun tetap hijau, Terdapat bercak pada daun, Batang mengalami pembusukan;Jamur Alternaria spp.;Penyemprotan fungisida
+kaggle;Melon;Busuk Buah Botrytis;Daun berwarna kuning, Terdapat bercak pada daun, Batang mengalami pembusukan;Jamur Botrytis cinerea;Gunakan fungisida dan kurangi kelembapan
+kaggle;Melon;Busuk Hitam;Daun berwarna kuning, Daun mengalami kelayuan, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;Jamur Alternaria spp.;Fungisida dan sanitasi kebun
+kaggle;Melon;Bercak Daun Cercospora;Daun berwarna kuning, Terdapat bercak pada daun, Batang mengalami pembusukan;Jamur Cercospora spp.;Gunakan fungisida
+kaggle;Melon;Embun Tepung;Daun berwarna kuning, Daun mengalami kelayuan, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;Jamur Erysiphe spp.;Gunakan fungisida sulfur
+kaggle;Melon;Karat Daun;Daun berwarna kuning, Terdapat bercak pada daun, Pertumbuhan tanaman terhambat;Jamur karat daun;Fungisida dan sanitasi kebun
+kaggle;Melon;Busuk Hitam;Terdapat bercak pada daun, Pertumbuhan tanaman terhambat;jamur Didymella bryoniae;rotasi tanaman, sanitasi kebun, pengaturan kelembapan, fungisida
+kaggle;Melon;Layu Bakteri;Terdapat bercak pada daun, Daun mengalami kelayuan, Pertumbuhan tanaman terhambat;bakteri Ralstonia solanacearum;penggunaan bibit sehat, rotasi tanaman, sanitasi kebun, bakterisida
+kaggle;Melon;Busuk Hitam;Daun berwarna kuning, Daun mengalami kelayuan, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;jamur Didymella bryoniae;rotasi tanaman, sanitasi kebun, pengaturan kelembapan, fungisida
+kaggle;Melon;Karat Daun;Daun mengalami kelayuan, Pertumbuhan tanaman terhambat;jamur Puccinia spp.;sanitasi kebun, rotasi tanaman, varietas tahan, fungisida
+kaggle;Melon;Antraknosa;Daun tetap hijau, Terdapat bercak pada daun, Daun mengalami kelayuan, Batang mengalami pembusukan;jamur Colletotrichum lagenarium;rotasi tanaman, sanitasi kebun, penggunaan benih sehat, fungisida
+kaggle;Melon;Jamur Upas;Daun tetap hijau, Terdapat bercak pada daun, Daun mengalami kelayuan, Batang mengalami pembusukan;jamur Upasia salmonicolor;pemangkasan bagian sakit, sanitasi kebun, menjaga kelembapan, fungisida
+kaggle;Melon;Busuk Lunak;Terdapat bercak pada daun;Bakteri Erwinia carotovora;Sanitasi tanaman, drainase baik, bakterisida
+kaggle;Melon;Busuk Akar;Daun tetap hijau, Terdapat bercak pada daun, Daun mengalami kelayuan, Pertumbuhan tanaman terhambat;Jamur Pythium spp.;Perbaiki drainase, rotasi tanaman, fungisida
+kaggle;Melon;Antraknosa;Daun tetap hijau, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;Jamur Colletotrichum lagenarium;Sanitasi tanaman, rotasi tanaman, fungisida
+kaggle;Melon;Bercak Daun Cercospora;Daun berwarna kuning, Terdapat bercak pada daun, Pertumbuhan tanaman terhambat;Jamur Cercospora citrullina;Sanitasi daun sakit, fungisida
+kaggle;Melon;Busuk Akar;Daun tetap hijau, Daun mengalami kelayuan, Batang mengalami pembusukan;Jamur Pythium spp.;Drainase baik, rotasi tanaman
+kaggle;Melon;Layu Bakteri;Daun tetap hijau, Batang mengalami pembusukan;Bakteri Erwinia tracheiphila;pengendalian serangga vektor, sanitasi tanaman sakit, rotasi tanaman, varietas tahan
+kaggle;Melon;Busuk Hitam;Daun mengalami kelayuan;Jamur Aspergillus niger;sanitasi buah sakit, rotasi tanaman, fungisida mankozeb
+kaggle;Melon;Bercak Daun;Terdapat bercak pada daun, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;Jamur Cercospora citrullina;sanitasi daun sakit, rotasi tanaman, fungisida klorotalonil
+kaggle;Padi;Busuk Lunak;Daun coklat,;Bakteri pembusuk jaringan tanaman;Gunakan benih sehat dan sanitasi lahan
+kaggle;Padi;Karat Daun;Daun mengalami kelayuan, Batang mengalami pembusukan;Jamur karat;Gunakan varietas tahan penyakit
+kaggle;Padi;Antraknosa;Terdapat bercak pada daun, Daun mengalami kelayuan, Batang mengalami pembusukan;Jamur Colletotrichum spp.;Fungisida dan rotasi tanaman
+kaggle;Padi;Embun Tepung;Daun tetap hijau;jamur Erysiphe spp.;varietas tahan, pengaturan jarak tanam, sanitasi lahan, fungisida
+kaggle;Padi;Karat Daun;Daun tetap hijau, Terdapat bercak pada daun, Daun mengalami kelayuan, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;jamur Puccinia spp.;varietas tahan, sanitasi lahan, rotasi tanaman, fungisida
+kaggle;Padi;Busuk Hitam;Daun tetap hijau, Terdapat bercak pada daun, Daun mengalami kelayuan, Batang mengalami pembusukan;bakteri Pectobacterium spp.;sanitasi lahan, penggunaan bibit sehat, pengaturan air, bakterisida
+kaggle;Padi;Busuk Buah Botrytis;Daun tetap hijau;jamur Botrytis cinerea;sanitasi tanaman sakit, pengaturan kelembapan, rotasi tanaman, fungisida
+kaggle;Padi;Busuk Akar Phytophthora;Daun berwarna kuning, Batang mengalami pembusukan;jamur air Phytophthora spp.;drainase baik, rotasi tanaman, sanitasi lahan, fungisida
+kaggle;Padi;Bercak Daun Cercospora;Daun berwarna kuning, Daun mengalami kelayuan;jamur Cercospora oryzae;sanitasi lahan, varietas tahan, rotasi tanaman, fungisida
+kaggle;Padi;Karat Daun;Daun tetap hijau, Batang mengalami pembusukan;jamur Puccinia spp.;varietas tahan, sanitasi lahan, fungisida
+kaggle;Padi;Antraknosa;Daun tetap hijau, Terdapat bercak pada daun, Daun mengalami kelayuan, Batang mengalami pembusukan;Jamur Colletotrichum spp.;Sanitasi lahan, rotasi tanaman, pengaturan kelembapan, fungisida
+kaggle;Padi;Karat Daun;Daun berwarna kuning, Batang mengalami pembusukan;Jamur Puccinia spp.;Gunakan varietas tahan, pemupukan seimbang, fungisida
+kaggle;Padi;Busuk Akar;Daun berwarna kuning, Daun mengalami kelayuan;Jamur Rhizoctonia solani;Drainase baik, rotasi tanaman, fungisida
+kaggle;Padi;Bercak Daun Cercospora;Daun berwarna kuning, Daun mengalami kelayuan;Jamur Cercospora oryzae;Sanitasi lahan, fungisida
+kaggle;Padi;Antraknosa;Daun tetap hijau, Terdapat bercak pada daun, Daun mengalami kelayuan, Batang mengalami pembusukan;Jamur Colletotrichum spp.;Sanitasi lahan, fungisida
+kaggle;Padi;Karat Daun;Daun berwarna kuning, Batang mengalami pembusukan;Jamur Puccinia spp.;Varietas tahan, fungisida
+kaggle;Padi;Busuk Buah Botrytis;Daun tetap hijau, Batang mengalami pembusukan;Jamur Botrytis cinerea;pengaturan jarak tanam, pengurangan kelembaban lahan, sanitasi sisa tanaman, fungisida iprodione atau mankozeb
+kaggle;Padi;Bercak Daun Cercospora;Daun tetap hijau, Daun mengalami kelayuan, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;Jamur Cercospora oryzae;rotasi tanaman, sanitasi lahan, fungisida mankozeb
+kaggle;Padi;Bercak Daun Cercospora;Daun mengalami kelayuan, Batang mengalami pembusukan;Jamur Cercospora oryzae;rotasi tanaman, sanitasi lahan, fungisida mankozeb
+manual;Padi;Blas;Daun bercak coklat berbentuk belah ketupat;Jamur Magnaporthe oryzae;Gunakan varietas tahan, fungisida, perbaikan drainase
+manual;Padi;Wereng Batang Coklat;Daun menguning lalu mengering;Nilaparvata lugens;Gunakan insektisida selektif, varietas tahan
+manual;Padi;Ulat Grayak;Daun berlubang tidak beraturan;Spodoptera litura;Gunakan insektisida biologis, perangkap feromon
+manual;Padi;Layu Fusarium;Daun layu dari bawah ke atas;Fusarium oxysporum;Solarisasi tanah, fungisida, varietas tahan
+manual;Padi;Antraknosa;Buah muncul bercak hitam cekung;Colletotrichum capsici;Fungisida, panen cepat, rotasi tanaman
+manual;Padi;Busuk Buah;Buah coklat kehitaman, busuk lembek;Phytophthora palmivora;Pangkas buah sakit, fungisida, drainase baik
+manual;Padi;Karat Daun;Daun bercak kuning-oranye;Hemileia vastatrix;Fungisida tembaga, pangkas daun sakit
+manual;Padi;Virus Kuning;Daun keriting, kerdil, berubah kuning;Virus Gemini via kutu kebul;Kendalikan kutu kebul, varietas tahan
+manual;Padi;Busuk Akar;Akar membusuk, tanaman layu mendadak;Phytophthora spp.;Perbaiki drainase, fungisida tanah
+manual;Padi;Penggerek Buah;Buah berlubang kecil, biji rusak;Hypothenemus hampei;Perangkap serangga, insektisida nabati
+kaggle;Pepaya;Bercak Daun;Daun berwarna kuning, Terdapat bercak pada daun, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;Alternaria alternata;Penyemprotan fungisida, membuang daun terinfeksi, dan menjaga sirkulasi udara
+kaggle;Pepaya;Embun Tepung;Daun tetap hijau, Terdapat bercak pada daun, Batang mengalami pembusukan;Jamur Erysiphe cichoracearum;Penyemprotan fungisida sulfur dan pengurangan kelembaban
+kaggle;Pepaya;Layu Bakteri;Daun mengalami kelayuan;Bakteri Ralstonia solanacearum;Sanitasi lahan, rotasi tanaman, dan penggunaan bibit seha
+kaggle;Pepaya;Busuk Lunak;Terdapat bercak pada daun;Bakteri Erwinia carotovora;Buang bagian tanaman terinfeksi, kurangi kelembapan, gunakan bakterisida
+kaggle;Pepaya;Busuk Lunak;Daun tetap hijau, Terdapat bercak pada daun, Daun mengalami kelayuan, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;Bakteri Erwinia carotovora;Sanitasi kebun dan bakterisida
+kaggle;Pepaya;Bercak Daun;Daun tetap hijau;jamur Cercospora papayae;sanitasi daun sakit, rotasi tanaman, menjaga kelembapan, fungisida
+kaggle;Pepaya;Layu Fusarium;Daun tetap hijau;jamur Fusarium oxysporum;rotasi tanaman, bibit sehat, drainase baik, fungisida
+kaggle;Pepaya;Embun Tepung;Daun mengalami kelayuan, Batang mengalami pembusukan;jamur Oidium caricae;sanitasi daun sakit, sirkulasi udara baik, pengaturan kelembapan, fungisida
+kaggle;Pepaya;Hawar Daun Bakteri;Daun tetap hijau, Pertumbuhan tanaman terhambat;bakteri Xanthomonas spp.;benih sehat, sanitasi kebun, rotasi tanaman, bakterisida
+kaggle;Pepaya;Antraknosa;Daun tetap hijau, Terdapat bercak pada daun, Batang mengalami pembusukan;jamur Colletotrichum gloeosporioides;sanitasi tanaman, pemangkasan, fungisida
+kaggle;Pepaya;Antraknosa;Daun mengalami kelayuan, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;Jamur Colletotrichum gloeosporioides;Sanitasi tanaman, fungisida, rotasi tanaman
+kaggle;Pepaya;Karat Daun;Daun berwarna coklat;Jamur Puccinia spp.;Sanitasi daun sakit, fungisida
+kaggle;Pepaya;Bercak Daun Cercospora;Terdapat bercak pada daun, Daun mengalami kelayuan;Jamur Cercospora papayae;sanitasi daun sakit, pengaturan jarak tanam, fungisida mankozeb
+manual;Pepaya;Blas;Daun bercak coklat berbentuk belah ketupat;Jamur Magnaporthe oryzae;Gunakan varietas tahan, fungisida, perbaikan drainase
+manual;Pepaya;Wereng Batang Coklat;Daun menguning lalu mengering;Nilaparvata lugens;Gunakan insektisida selektif, varietas tahan
+manual;Pepaya;Ulat Grayak;Daun berlubang tidak beraturan;Spodoptera litura;Gunakan insektisida biologis, perangkap feromon
+manual;Pepaya;Layu Fusarium;Daun layu dari bawah ke atas;Fusarium oxysporum;Solarisasi tanah, fungisida, varietas tahan
+manual;Pepaya;Antraknosa;Buah muncul bercak hitam cekung;Colletotrichum capsici;Fungisida, panen cepat, rotasi tanaman
+manual;Pepaya;Busuk Buah;Buah coklat kehitaman, busuk lembek;Phytophthora palmivora;Pangkas buah sakit, fungisida, drainase baik
+manual;Pepaya;Karat Daun;Daun bercak kuning-oranye;Hemileia vastatrix;Fungisida tembaga, pangkas daun sakit
+manual;Pepaya;Virus Kuning;Daun keriting, kerdil, berubah kuning;Virus Gemini via kutu kebul;Kendalikan kutu kebul, varietas tahan
+manual;Pepaya;Busuk Akar;Akar membusuk, tanaman layu mendadak;Phytophthora spp.;Perbaiki drainase, fungisida tanah
+manual;Pepaya;Penggerek Buah;Buah berlubang kecil, biji rusak;Hypothenemus hampei;Perangkap serangga, insektisida nabati
+manual;Pisang;Blas;Daun bercak coklat berbentuk belah ketupat;Jamur Magnaporthe oryzae;Gunakan varietas tahan, fungisida, perbaikan drainase
+manual;Pisang;Wereng Batang Coklat;Daun menguning lalu mengering;Nilaparvata lugens;Gunakan insektisida selektif, varietas tahan
+manual;Pisang;Ulat Grayak;Daun berlubang tidak beraturan;Spodoptera litura;Gunakan insektisida biologis, perangkap feromon
+manual;Pisang;Layu Fusarium;Daun layu dari bawah ke atas;Fusarium oxysporum;Solarisasi tanah, fungisida, varietas tahan
+manual;Pisang;Antraknosa;Buah muncul bercak hitam cekung;Colletotrichum capsici;Fungisida, panen cepat, rotasi tanaman
+manual;Pisang;Busuk Buah;Buah coklat kehitaman, busuk lembek;Phytophthora palmivora;Pangkas buah sakit, fungisida, drainase baik
+manual;Pisang;Karat Daun;Daun bercak kuning-oranye;Hemileia vastatrix;Fungisida tembaga, pangkas daun sakit
+manual;Pisang;Virus Kuning;Daun keriting, kerdil, berubah kuning;Virus Gemini via kutu kebul;Kendalikan kutu kebul, varietas tahan
+manual;Pisang;Busuk Akar;Akar membusuk, tanaman layu mendadak;Phytophthora spp.;Perbaiki drainase, fungisida tanah
+manual;Pisang;Penggerek Buah;Buah berlubang kecil, biji rusak;Hypothenemus hampei;Perangkap serangga, insektisida nabati
+kaggle;Semangka;Busuk akar;Daun berwarna kuning;Jamur Rhizoctonia solani;Perbaikan drainase tanah
+kaggle;Semangka;Bercak Daun Cercospora;Terdapat bercak pada daun, Daun mengalami kelayuan, Pertumbuhan tanaman terhambat;Jamur Cercospora spp.;Fungisida dan sanitasi kebun
+kaggle;Semangka;Layu Bakteri;Daun mengalami kelayuan;Bakteri Ralstonia solanacearum;Gunakan varietas tahan dan sanitasi lahan
+kaggle;Semangka;Karat Daun;Daun tetap hijau, Pertumbuhan tanaman terhambat;jamur Puccinia spp.;sanitasi kebun, rotasi tanaman, varietas tahan, fungisida
+kaggle;Semangka;Jamur Upas;Daun tetap hijau, Terdapat bercak pada daun, Pertumbuhan tanaman terhambat;jamur Upasia salmonicolor;pemangkasan bagian sakit, sanitasi kebun, menjaga kelembapan, fungisida
+kaggle;Semangka;Busuk Lunak;Daun tetap hijau, Terdapat bercak pada daun, Daun mengalami kelayuan, Pertumbuhan tanaman terhambat;bakteri Pectobacterium carotovorum;sanitasi kebun, pengaturan kelembapan, penggunaan bibit sehat, bakterisida
+kaggle;Semangka;Busuk Akar Phytophthora;Daun berwarna kuning, Daun mengalami kelayuan, Batang mengalami pembusukan;jamur air Phytophthora capsici;drainase baik, penggunaan mulsa, rotasi tanaman, fungisida
+kaggle;Semangka;Busuk Lunak;Daun tetap hijau, Terdapat bercak pada daun, Daun mengalami kelayuan, Pertumbuhan tanaman terhambat;bakteri Pectobacterium carotovorum;sanitasi kebun, pengaturan kelembapan, bibit sehat, bakterisida
+kaggle;Semangka;Layu Fusarium;Daun tetap hijau, Terdapat bercak pada daun, Daun mengalami kelayuan, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;jamur Fusarium oxysporum;rotasi tanaman, varietas tahan, sanitasi lahan, fungisida
+kaggle;Semangka;Layu Bakteri;Daun berwarna kuning, Daun mengalami kelayuan, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;bakteri Ralstonia solanacearum;bibit sehat, rotasi tanaman, sanitasi lahan, bakterisida
+kaggle;Semangka;Layu Fusarium;Daun tetap hijau, Terdapat bercak pada daun, Daun mengalami kelayuan, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;jamur Fusarium oxysporum;rotasi tanaman, varietas tahan, fungisida
+kaggle;Semangka;Bercak Daun;Daun berwarna kuning, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;Jamur Cercospora citrullina;sanitasi tanaman sakit, rotasi tanaman, pengaturan kelembaban kebun, fungisida klorotalonil atau mankozeb
+kaggle;Semangka;Karat Daun;Daun mengalami kelayuan;Jamur Puccinia spp.;sanitasi tanaman sakit, pengurangan kelembaban kebun, fungisida mankozeb atau propikonazol
+kaggle;Semangka;Busuk Lunak;Daun tetap hijau, Terdapat bercak pada daun, Daun mengalami kelayuan, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;Bakteri Erwinia carotovora;sanitasi kebun, pengaturan kelembaban, bakterisida tembaga
+kaggle;Semangka;Busuk Hitam;Daun berwarna kuning, Daun mengalami kelayuan, Pertumbuhan tanaman terhambat;Jamur Aspergillus niger;sanitasi buah sakit, rotasi tanaman, fungisida mankozeb
+manual;Semangka;Blas;Daun bercak coklat berbentuk belah ketupat;Jamur Magnaporthe oryzae;Gunakan varietas tahan, fungisida, perbaikan drainase
+manual;Semangka;Wereng Batang Coklat;Daun menguning lalu mengering;Nilaparvata lugens;Gunakan insektisida selektif, varietas tahan
+manual;Semangka;Ulat Grayak;Daun berlubang tidak beraturan;Spodoptera litura;Gunakan insektisida biologis, perangkap feromon
+manual;Semangka;Layu Fusarium;Daun layu dari bawah ke atas;Fusarium oxysporum;Solarisasi tanah, fungisida, varietas tahan
+manual;Semangka;Antraknosa;Buah muncul bercak hitam cekung;Colletotrichum capsici;Fungisida, panen cepat, rotasi tanaman
+manual;Semangka;Busuk Buah;Buah coklat kehitaman, busuk lembek;Phytophthora palmivora;Pangkas buah sakit, fungisida, drainase baik
+manual;Semangka;Karat Daun;Daun bercak kuning-oranye;Hemileia vastatrix;Fungisida tembaga, pangkas daun sakit
+manual;Semangka;Virus Kuning;Daun keriting, kerdil, berubah kuning;Virus Gemini via kutu kebul;Kendalikan kutu kebul, varietas tahan
+manual;Semangka;Busuk Akar;Akar membusuk, tanaman layu mendadak;Phytophthora spp.;Perbaiki drainase, fungisida tanah
+manual;Semangka;Penggerek Buah;Buah berlubang kecil, biji rusak;Hypothenemus hampei;Perangkap serangga, insektisida nabati
+kaggle;Singkong;Busuk Akar Phytophthora;Daun tetap hijau, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;Jamur Phytophthora palmivora;Perbaikan drainase tanah, hindari genangan air, dan penggunaan fungisida sistemik
+kaggle;Singkong;Busuk Hitam;Daun tetap hijau, Daun mengalami kelayuan;Bakteri Xanthomonas campestris;Rotasi tanaman dan penggunaan benih sehat
+kaggle;Singkong;Layu Fusarium;Daun tetap hijau;Jamur Fusarium oxysporum;Rotasi tanaman dan varietas tahan
+kaggle;Singkong;Bercak Daun;Daun berwarna kuning, Terdapat bercak pada daun, Daun mengalami kelayuan, Pertumbuhan tanaman terhambat;Jamur Alternaria spp.;Fungisida dan sanitasi kebun
+kaggle;Singkong;Layu Fusarium;Batang mengalami pembusukan;Jamur Fusarium oxysporum;Rotasi tanaman dan fungisida
+kaggle;Singkong;Antraknosa;Daun berwarna kuning, Batang mengalami pembusukan;Jamur Colletotrichum spp.;Fungisida dan rotasi tanaman
+kaggle;Singkong;Karat Daun;Daun berwarna kuning, Terdapat bercak pada daun, Daun mengalami kelayuan, Batang mengalami pembusukan;Jamur karat daun;Semprot fungisida
+kaggle;Singkong;Bercak Daun;Daun tetap hijau, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;jamur Cercospora henningsii;sanitasi daun sakit, rotasi tanaman, penggunaan varietas tahan, fungisida
+kaggle;Singkong;Bercak Daun Cercospora;Daun tetap hijau, Daun mengalami kelayuan;jamur Cercospora henningsii;sanitasi daun sakit, rotasi tanaman, varietas tahan, fungisida
+kaggle;Singkong;Embun Tepung;Terdapat bercak pada daun, Daun mengalami kelayuan;jamur Oidium manihotis;sanitasi daun sakit, sirkulasi udara baik, rotasi tanaman, fungisida
+kaggle;Singkong;Antraknosa;Daun berwarna kuning, Batang mengalami pembusukan;Jamur Colletotrichum gloeosporioides;Sanitasi tanaman, fungisida, varietas tahan
+kaggle;Singkong;Antraknosa;Daun berwarna kuning, Daun mengalami kelayuan, Pertumbuhan tanaman terhambat;Jamur Colletotrichum gloeosporioides;sanitasi tanaman sakit, varietas tahan, rotasi tanaman, fungisida mankozeb
+kaggle;Singkong;Busuk Buah Botrytis;Daun berwarna kuning, Terdapat bercak pada daun, Daun mengalami kelayuan, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;Jamur Botrytis cinerea;sanitasi tanaman sakit, pengaturan kelembaban, fungisida iprodione atau mankozeb
+kaggle;Singkong;Layu Fusarium;Daun tetap hijau, Daun mengalami kelayuan, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;Jamur Fusarium oxysporum;rotasi tanaman, bibit sehat, solarisasi tanah, agen hayati Trichoderma
+kaggle;Singkong;Busuk Akar Phytophthora;Daun tetap hijau, Terdapat bercak pada daun, Batang mengalami pembusukan;Jamur Phytophthora palmivora;perbaikan drainase tanah, sanitasi tanaman sakit, fungisida metalaksil
+manual;Singkong;Blas;Daun bercak coklat berbentuk belah ketupat;Jamur Magnaporthe oryzae;Gunakan varietas tahan, fungisida, perbaikan drainase
+manual;Singkong;Wereng Batang Coklat;Daun menguning lalu mengering;Nilaparvata lugens;Gunakan insektisida selektif, varietas tahan
+manual;Singkong;Ulat Grayak;Daun berlubang tidak beraturan;Spodoptera litura;Gunakan insektisida biologis, perangkap feromon
+manual;Singkong;Layu Fusarium;Daun layu dari bawah ke atas;Fusarium oxysporum;Solarisasi tanah, fungisida, varietas tahan
+manual;Singkong;Antraknosa;Buah muncul bercak hitam cekung;Colletotrichum capsici;Fungisida, panen cepat, rotasi tanaman
+manual;Singkong;Busuk Buah;Buah coklat kehitaman, busuk lembek;Phytophthora palmivora;Pangkas buah sakit, fungisida, drainase baik
+manual;Singkong;Karat Daun;Daun bercak kuning-oranye;Hemileia vastatrix;Fungisida tembaga, pangkas daun sakit
+manual;Singkong;Virus Kuning;Daun keriting, kerdil, berubah kuning;Virus Gemini via kutu kebul;Kendalikan kutu kebul, varietas tahan
+manual;Singkong;Busuk Akar;Akar membusuk, tanaman layu mendadak;Phytophthora spp.;Perbaiki drainase, fungisida tanah
+manual;Singkong;Penggerek Buah;Buah berlubang kecil, biji rusak;Hypothenemus hampei;Perangkap serangga, insektisida nabati
+kaggle;Stroberi;Busuk Lunak;Daun berwarna kuning, Daun mengalami kelayuan, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;Bakteri Pectobacterium carotovorum;Sanitasi tanaman, buang bagian terinfeksi, perbaiki drainase, gunakan bibit sehat, aplikasi bakterisida
+kaggle;Stroberi;Bercak Lunak;Daun berwarna kuning, Terdapat bercak pada daun;Bakteri Pectobacterium carotovorum;Sanitasi tanaman dan bakterisida
+kaggle;Stroberi;Karat Daun;Daun tetap hijau, Terdapat bercak pada daun, Batang mengalami pembusukan;Jamur karat daun;Pangkas daun sakit, gunakan fungisida
+kaggle;Stroberi;Hawar Daun Bakteri;Daun berwarna kuning, Terdapat bercak pada daun, Daun mengalami kelayuan, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;Bakteri patogen daun;Gunakan bakterisida
+kaggle;Stroberi;Layu Fusarium;Daun berwarna kuning, Daun mengalami kelayuan;Jamur Fusarium oxysporum;Rotasi tanaman dan fungisida
+kaggle;Stroberi;Hawar Daun Bakteri;Daun tetap hijau, Terdapat bercak pada daun, Daun mengalami kelayuan;Bakteri Xanthomonas spp.;Gunakan bibit sehat, sanitasi tanaman, bakterisida
+kaggle;Stroberi;Busuk Lunak;Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;Bakteri Erwinia carotovora;Drainase baik, sanitasi tanaman
+kaggle;Stroberi;Hawar Daun Bakteri;Daun tetap hijau, Terdapat bercak pada daun, Daun mengalami kelayuan;Bakteri Xanthomonas spp.;Bibit sehat, bakterisida
+kaggle;Tebu;Jamur Upas;Pertumbuhan tanaman terhambat;Jamur Upasia salmonicolor;Pangkas cabang terinfeksi, sanitasi kebun, dan fungisida
+kaggle;Tebu;Embun Tepung;Daun tetap hijau, Pertumbuhan tanaman terhambat;Jamur Erysiphe spp.;Semprot fungisida sulfur dan kurangi kelembaban
+kaggle;Tebu;Busuk hitam;Terdapat bercak pada daun;Bakteri Xanthomonas campestris;Rotasi tanaman dan sanitasi
+kaggle;Tebu;Hawar Daun Bakteri;Daun tetap hijau, Batang mengalami pembusukan;Jamur Botrytis cinerea;Kurangi kelembaban dan gunakan fungisida
+kaggle;Tebu;Hawar Daun Bakteri;Terdapat bercak pada daun, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;Bakteri Xanthomonas albilineans;Gunakan varietas tahan dan sanitasi kebun
+kaggle;Tebu;Busuk Akar Phytophthora;Daun tetap hijau, Daun mengalami kelayuan, Batang mengalami pembusukan;Jamur Phytophthora spp.;Drainase tanah baik dan fungisida
+kaggle;Tebu;Bercak Daun;Terdapat bercak pada daun, Batang mengalami pembusukan;jamur Cercospora spp.;sanitasi daun sakit, rotasi tanaman, varietas tahan, fungisida
+kaggle;Tebu;Embun Tepung;Terdapat bercak pada daun, Daun mengalami kelayuan, Pertumbuhan tanaman terhambat;jamur Erysiphe spp.;sanitasi kebun, rotasi tanaman, menjaga sirkulasi udara, fungisida
+kaggle;Tebu;Jamur Upas;Daun berwarna kuning, Pertumbuhan tanaman terhambat;jamur Upasia salmonicolor;pemangkasan bagian terinfeksi, sanitasi kebun, fungisida, pengaturan kelembapan
+kaggle;Tebu;Busuk Akar;Daun berwarna kuning, Terdapat bercak pada daun, Pertumbuhan tanaman terhambat;jamur Rhizoctonia solani;rotasi tanaman, sanitasi lahan, drainase baik, fungisida
+kaggle;Tebu;Busuk Buah Botrytis;Terdapat bercak pada daun, Batang mengalami pembusukan;Jamur Botrytis cinerea;Sanitasi tanaman, kurangi kelembapan, pemangkasan bagian terinfeksi, fungisida
+kaggle;Tebu;Bercak Daun;Daun berwarna kuning, Pertumbuhan tanaman terhambat;Jamur Cercospora spp.;Sanitasi daun terinfeksi, jarak tanam cukup, fungisida
+kaggle;Tebu;Antraknosa;Daun tetap hijau, Pertumbuhan tanaman terhambat;Jamur Colletotrichum spp.;Sanitasi tanaman, rotasi tanaman, fungisida
+kaggle;Tebu;Karat Daun;Daun tetap hijau, Terdapat bercak pada daun, Daun mengalami kelayuan, Batang mengalami pembusukan;Jamur Puccinia melanocephala;Varietas tahan, sanitasi tanaman, fungisida
+kaggle;Tebu;Hawar Daun Bakteri;Terdapat bercak pada daun, Batang mengalami pembusukan;Bakteri Xanthomonas albilineans;Gunakan bibit sehat, sanitasi tanaman, bakterisida
+kaggle;Tebu;Busuk Buah Botrytis;Daun mengalami kelayuan;Jamur Botrytis cinerea;Sanitasi tanaman, fungisida
+kaggle;Tebu;Busuk Akar Phytophthora;Daun berwarna kuning, Terdapat bercak pada daun, Daun mengalami kelayuan, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;Jamur Phytophthora spp.;Drainase baik, rotasi tanaman, fungisida
+kaggle;Tebu;Busuk Buah Botrytis;Terdapat bercak pada daun, Batang mengalami pembusukan;Jamur Botrytis cinerea;Sanitasi tanaman, fungisida
+kaggle;Tebu;Bercak Daun;Daun berwarna kuning, Pertumbuhan tanaman terhambat;Jamur Cercospora spp.;Sanitasi daun sakit
+kaggle;Tebu;Antraknosa;Daun tetap hijau, Pertumbuhan tanaman terhambat;Jamur Colletotrichum spp.;Sanitasi tanaman
+kaggle;Tebu;Karat Daun;Daun tetap hijau, Terdapat bercak pada daun, Daun mengalami kelayuan, Batang mengalami pembusukan;Jamur Puccinia melanocephala;varietas tahan, sanitasi sisa tanaman, pengaturan jarak tanam, fungisida mankozeb atau propikonazol
+kaggle;Tebu;Busuk Lunak;Daun tetap hijau, Terdapat bercak pada daun, Batang mengalami pembusukan;Bakteri Erwinia carotovora;sanitasi kebun, perbaikan drainase tanah, bibit sehat, bakterisida tembaga, pengendalian kelembaban
+kaggle;Tebu;Embun Tepung;Daun berwarna kuning, Terdapat bercak pada daun, Daun mengalami kelayuan, Batang mengalami pembusukan;Jamur Erysiphe spp.;varietas tahan, pengurangan kelembaban, sanitasi daun terinfeksi, fungisida sulfur atau triazol
+kaggle;Tebu;Busuk Lunak;Terdapat bercak pada daun, Batang mengalami pembusukan;Bakteri Erwinia carotovora;sanitasi kebun, perbaikan drainase, bibit sehat, bakterisida tembaga
+manual;Tebu;Blas;Daun bercak coklat berbentuk belah ketupat;Jamur Magnaporthe oryzae;Gunakan varietas tahan, fungisida, perbaikan drainase
+manual;Tebu;Wereng Batang Coklat;Daun menguning lalu mengering;Nilaparvata lugens;Gunakan insektisida selektif, varietas tahan
+manual;Tebu;Ulat Grayak;Daun berlubang tidak beraturan;Spodoptera litura;Gunakan insektisida biologis, perangkap feromon
+manual;Tebu;Layu Fusarium;Daun layu dari bawah ke atas;Fusarium oxysporum;Solarisasi tanah, fungisida, varietas tahan
+manual;Tebu;Antraknosa;Buah muncul bercak hitam cekung;Colletotrichum capsici;Fungisida, panen cepat, rotasi tanaman
+manual;Tebu;Busuk Buah;Buah coklat kehitaman, busuk lembek;Phytophthora palmivora;Pangkas buah sakit, fungisida, drainase baik
+manual;Tebu;Karat Daun;Daun bercak kuning-oranye;Hemileia vastatrix;Fungisida tembaga, pangkas daun sakit
+manual;Tebu;Virus Kuning;Daun keriting, kerdil, berubah kuning;Virus Gemini via kutu kebul;Kendalikan kutu kebul, varietas tahan
+manual;Tebu;Busuk Akar;Akar membusuk, tanaman layu mendadak;Phytophthora spp.;Perbaiki drainase, fungisida tanah
+manual;Tebu;Penggerek Buah;Buah berlubang kecil, biji rusak;Hypothenemus hampei;Perangkap serangga, insektisida nabati
+kaggle;Terong;Layu Bakteri;Daun tetap hijau, Terdapat bercak pada daun, Batang mengalami pembusukan;Bakteri Ralstonia solanacearum;Rotasi tanaman dan penggunaan varietas tahan penyakit
+kaggle;Terong;Karat Daun;Daun mengalami kelayuan, Pertumbuhan tanaman terhambat;Jamur Puccinia spp.;Penyemprotan fungisida dan sanitasi daun
+kaggle;Terong;Karat Daun;Daun tetap hijau, Terdapat bercak pada daun;Jamur Puccinia spp.;Fungisida dan pemangkasan daun terinfeksi
+kaggle;Terong;Busuk Buah Botrytis;Daun tetap hijau, Batang mengalami pembusukan;jamur Corticium salmonicolor;Pangkas bagian tanaman yang terinfeksi, jaga sirkulasi udara, dan semprot fungisida berbahan tembaga.
+kaggle;Terong;Karat Daun;Daun tetap hijau, Terdapat bercak pada daun, Pertumbuhan tanaman terhambat;Jamur karat Puccinia spp.;Semprot fungisida, buang daun terinfeksi
+kaggle;Terong;Karat Daun;Daun tetap hijau, Daun mengalami kelayuan;Jamur karat daun;Semprot fungisida dan buang daun sakit
+kaggle;Terong;Antraknosa;Daun mengalami kelayuan, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;Jamur Colletotrichum spp.;Gunakan fungisida dan buang bagian terinfeksi
+kaggle;Terong;Embun Tepung;Terdapat bercak pada daun;Jamur Erysiphe spp.;Fungisida sulfur
+kaggle;Terong;Busuk Buah Botrytis;Daun mengalami kelayuan, Pertumbuhan tanaman terhambat;jamur Botrytis cinerea;sanitasi kebun, membuang buah terinfeksi, menjaga sirkulasi udara, fungisida
+kaggle;Terong;Bercak Daun;Daun tetap hijau, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;jamur Alternaria solani;sanitasi daun sakit, rotasi tanaman, penggunaan varietas tahan, fungisida
+kaggle;Terong;Bercak Daun;Daun tetap hijau, Terdapat bercak pada daun, Daun mengalami kelayuan, Batang mengalami pembusukan;jamur Alternaria solani;sanitasi daun sakit, rotasi tanaman, penggunaan varietas tahan, fungisida
+kaggle;Terong;Layu Fusarium;Terdapat bercak pada daun, Daun mengalami kelayuan, Pertumbuhan tanaman terhambat;Jamur Fusarium oxysporum;Rotasi tanaman, varietas tahan, fungisida
+kaggle;Terong;Busuk Akar Phytophthora;Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;Jamur Phytophthora capsici;perbaikan drainase tanah, rotasi tanaman, mulsa plastik, fungisida metalaksil
+manual;Terong;Blas;Daun bercak coklat berbentuk belah ketupat;Jamur Magnaporthe oryzae;Gunakan varietas tahan, fungisida, perbaikan drainase
+manual;Terong;Wereng Batang Coklat;Daun menguning lalu mengering;Nilaparvata lugens;Gunakan insektisida selektif, varietas tahan
+manual;Terong;Ulat Grayak;Daun berlubang tidak beraturan;Spodoptera litura;Gunakan insektisida biologis, perangkap feromon
+manual;Terong;Layu Fusarium;Daun layu dari bawah ke atas;Fusarium oxysporum;Solarisasi tanah, fungisida, varietas tahan
+manual;Terong;Antraknosa;Buah muncul bercak hitam cekung;Colletotrichum capsici;Fungisida, panen cepat, rotasi tanaman
+manual;Terong;Busuk Buah;Buah coklat kehitaman, busuk lembek;Phytophthora palmivora;Pangkas buah sakit, fungisida, drainase baik
+manual;Terong;Karat Daun;Daun bercak kuning-oranye;Hemileia vastatrix;Fungisida tembaga, pangkas daun sakit
+manual;Terong;Virus Kuning;Daun keriting, kerdil, berubah kuning;Virus Gemini via kutu kebul;Kendalikan kutu kebul, varietas tahan
+manual;Terong;Busuk Akar;Akar membusuk, tanaman layu mendadak;Phytophthora spp.;Perbaiki drainase, fungisida tanah
+manual;Terong;Penggerek Buah;Buah berlubang kecil, biji rusak;Hypothenemus hampei;Perangkap serangga, insektisida nabati
+kaggle;Tomat;Busuk Akar;Daun berwarna kuning, Terdapat bercak pada daun, Batang mengalami pembusukan;Jamur Rhizoctonia solani;Perbaiki drainase tanah dan gunakan fungisida
+kaggle;Tomat;Busuk Lunak;Daun tetap hijau, Daun mengalami kelayuan, Batang mengalami pembusukan;Bakteri Pectobacterium carotovorum;Buang bagian tanaman sakit, kurangi kelembaban, gunakan bakterisida
+kaggle;Tomat;Antraknosa;Daun tetap hijau, Daun mengalami kelayuan, Pertumbuhan tanaman terhambat;Jamur Colletotrichum spp.;Fungisida dan sanitasi kebun
+kaggle;Tomat;Busuk Lunak;Daun berwarna kuning, Daun mengalami kelayuan, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;Bakteri Erwinia carotovora;Sanitasi lahan dan penggunaan bakterisida
+kaggle;Tomat;Karat Daun;Daun berwarna kuning, Daun mengalami kelayuan, Batang mengalami pembusukan;Jamur karat daun;Semprot fungisida dan sanitasi tanaman
+kaggle;Tomat;Busuk Lunak;Daun tetap hijau, Pertumbuhan tanaman terhambat;bakteri Pectobacterium carotovorum;sanitasi kebun, penggunaan bibit sehat, pengaturan kelembapan, bakterisida
+kaggle;Tomat;Karat Daun;Daun berwarna kuning, Terdapat bercak pada daun;jamur Puccinia spp.;sanitasi kebun, rotasi tanaman, varietas tahan, fungisida
+kaggle;Tomat;Antraknosa;Daun tetap hijau;jamur Colletotrichum coccodes;sanitasi kebun, rotasi tanaman, penggunaan benih sehat, fungisida
+kaggle;Tomat;Layu Bakteri;Terdapat bercak pada daun, Daun mengalami kelayuan;bakteri Ralstonia solanacearum;bibit sehat, rotasi tanaman, sanitasi kebun, bakterisida
+kaggle;Tomat;Jamur Upas;Daun berwarna kuning, Daun mengalami kelayuan, Batang mengalami pembusukan;jamur Upasia salmonicolor;pemangkasan bagian sakit, sanitasi kebun, fungisida
+kaggle;Tomat;Bercak Daun;Terdapat bercak pada daun, Daun mengalami kelayuan, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;jamur Septoria lycopersici;sanitasi daun sakit, rotasi tanaman, fungisida
+kaggle;Tomat;Busuk Buah Botrytis;Daun tetap hijau, Terdapat bercak pada daun, Batang mengalami pembusukan;Jamur Botrytis cinerea;Sanitasi buah sakit, pengaturan kelembapan, fungisida
+kaggle;Tomat;Antraknosa;Daun tetap hijau, Daun mengalami kelayuan, Batang mengalami pembusukan;Jamur Colletotrichum coccodes;rotasi tanaman, sanitasi buah terinfeksi, fungisida klorotalonil atau mankozeb
+kaggle;Tomat;Karat Daun;Daun tetap hijau, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;Jamur Puccinia spp.;sanitasi daun terinfeksi, pengaturan jarak tanam, fungisida mankozeb atau propikonazol
+kaggle;Tomat;Jamur Upas;Daun berwarna kuning, Terdapat bercak pada daun, Daun mengalami kelayuan, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;Jamur Upasia salmonicolor;pemangkasan bagian sakit, sanitasi kebun, fungisida tembaga
+kaggle;Tomat;Hawar Daun Bakteri;Terdapat bercak pada daun, Daun mengalami kelayuan, Pertumbuhan tanaman terhambat;Bakteri Xanthomonas spp.;benih bebas patogen, sanitasi tanaman sakit, bakterisida tembaga
+manual;Tomat;Blas;Daun bercak coklat berbentuk belah ketupat;Jamur Magnaporthe oryzae;Gunakan varietas tahan, fungisida, perbaikan drainase
+manual;Tomat;Wereng Batang Coklat;Daun menguning lalu mengering;Nilaparvata lugens;Gunakan insektisida selektif, varietas tahan
+manual;Tomat;Ulat Grayak;Daun berlubang tidak beraturan;Spodoptera litura;Gunakan insektisida biologis, perangkap feromon
+manual;Tomat;Lalat Buah;Buah berlubang, buah membusuk dari dalam, buah gugur sebelum matang;Bactrocera sp;Solarisasi tanah, fungisida, varietas tahan
+manual;Tomat;Antraknosa;Buah muncul bercak hitam cekung;Colletotrichum capsici;Fungisida, panen cepat, rotasi tanaman
+manual;Tomat;Busuk Buah;Buah coklat kehitaman, busuk lembek;Phytophthora palmivora;Sanitasi buah terserang, pemusnahan buah jatuh, penggunaan perangkap metil eugenol
+manual;Tomat;Karat Daun;Daun bercak kuning-oranye;Hemileia vastatrix;Fungisida tembaga, pangkas daun sakit
+manual;Tomat;Virus Kuning;Daun keriting, kerdil, berubah kuning;Virus Gemini via kutu kebul;Kendalikan kutu kebul, varietas tahan
+manual;Tomat;Busuk Akar;Akar membusuk, tanaman layu mendadak;Phytophthora spp.;Perbaiki drainase, fungisida tanah
+manual;Tomat;Penggerek Buah;Buah berlubang kecil, biji rusak;Hypothenemus hampei;Perangkap serangga, insektisida nabati
+kaggle;Wortel;Layu Bakteri;Daun tetap hijau, Daun mengalami kelayuan, Batang mengalami pembusukan;Bakteri Ralstonia solanacearum;Rotasi tanaman dan gunakan bibit sehat
+kaggle;Wortel;Layu Bakteri;Daun tetap hijau, Terdapat bercak pada daun, Daun mengalami kelayuan, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;Bakteri Ralstonia solanacearum;Rotasi tanaman dan sanitasi lahan
+kaggle;Wortel;Bercak Daun;Daun tetap hijau, Daun mengalami kelayuan, Batang mengalami pembusukan;Jamur Alternaria dauci;Fungisida dan sanitasi
+kaggle;Wortel;Hawar Daun Bakteri;Daun mengalami kelayuan, Pertumbuhan tanaman terhambat;Bakteri patogen daun;Gunakan bakterisida dan benih sehat
+kaggle;Wortel;Antraknosa;Daun berwarna kuning, Pertumbuhan tanaman terhambat;Jamur Colletotrichum spp.;Fungisida dan sanitasi tanaman
+kaggle;Wortel;Bercak Daun;Daun tetap hijau, Daun mengalami kelayuan;Jamur Alternaria spp.;Fungisida dan rotasi tanaman
+kaggle;Wortel;Busuk Buah Botrytis;Daun berwarna kuning, Terdapat bercak pada daun, Batang mengalami pembusukan;Jamur Botrytis cinerea;Sanitasi kebun dan fungisida
+kaggle;Wortel;Busuk Hitam;Daun mengalami kelayuan, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;jamur Alternaria radicina;rotasi tanaman, sanitasi lahan, penggunaan benih sehat, fungisida
+kaggle;Wortel;Antraknosa;Daun berwarna kuning, Terdapat bercak pada daun, Daun mengalami kelayuan, Batang mengalami pembusukan;jamur Colletotrichum spp.;sanitasi kebun, rotasi tanaman, penggunaan benih sehat, fungisida
+kaggle;Wortel;Busuk Lunak;Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;bakteri Pectobacterium carotovorum;sanitasi lahan, penggunaan benih sehat, pengaturan kelembapan, bakterisida
+kaggle;Wortel;Busuk Hitam;Terdapat bercak pada daun, Daun mengalami kelayuan, Batang mengalami pembusukan;jamur Alternaria radicina;rotasi tanaman, sanitasi lahan, penggunaan benih sehat, fungisida
+kaggle;Wortel;Busuk Buah Botrytis;Daun berwarna kuning, Daun mengalami kelayuan, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;jamur Botrytis cinerea;sanitasi kebun, rotasi tanaman, menjaga kelembapan, fungisida
+kaggle;Wortel;Hawar Daun Bakteri;Daun berwarna kuning, Terdapat bercak pada daun;bakteri Xanthomonas spp.;sanitasi kebun, benih sehat, rotasi tanaman, bakterisida
+kaggle;Wortel;Layu Fusarium;Daun tetap hijau, Terdapat bercak pada daun, Pertumbuhan tanaman terhambat;jamur Fusarium oxysporum;rotasi tanaman, benih sehat, drainase baik, fungisida
+kaggle;Wortel;Bercak Daun Cercospora;Daun berwarna kuning, Terdapat bercak pada daun, Daun mengalami kelayuan;jamur Cercospora carotae;sanitasi daun sakit, rotasi tanaman, fungisida
+kaggle;Wortel;Bercak Daun Cercospora;Daun berwarna kuning, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;Jamur Cercospora carotae;rotasi tanaman, sanitasi daun terinfeksi, pengaturan jarak tanam, fungisida klorotalonil atau mankozeb
+kaggle;Wortel;Hawar Daun Bakteri;Daun tetap hijau, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;Bakteri Xanthomonas campestris;sanitasi lahan, penggunaan benih sehat, rotasi tanaman, bakterisida tembaga
+kaggle;Wortel;Layu Fusarium;Daun berwarna kuning, Terdapat bercak pada daun, Daun mengalami kelayuan;Jamur Fusarium oxysporum;rotasi tanaman, bibit sehat, pengolahan tanah baik, agen hayati Trichoderma
+kaggle;Wortel;Bercak Daun Cercospora;Daun tetap hijau, Daun mengalami kelayuan, Pertumbuhan tanaman terhambat;Jamur Cercospora carotae;rotasi tanaman, sanitasi daun sakit, fungisida klorotalonil
+kaggle;Wortel;Layu Fusarium;Daun berwarna kuning, Terdapat bercak pada daun, Batang mengalami pembusukan, Pertumbuhan tanaman terhambat;Jamur Fusarium oxysporum;rotasi tanaman, bibit sehat, agen hayati Trichoderma
