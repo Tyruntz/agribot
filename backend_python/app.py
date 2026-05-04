@@ -9,7 +9,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
 from Sastrawi.StopWordRemover.StopWordRemoverFactory import StopWordRemoverFactory
-from google import genai # <--- Pakai SDK Baru
+from google import genai 
 import re
 import os
 
@@ -17,50 +17,124 @@ app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})
 
 # ==========================================
-# 1. SETUP GEMINI API (VERSI TERBARU)
+# 1. SETUP GEMINI API
 # ==========================================
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 client = genai.Client(api_key=GEMINI_API_KEY)
 
 # ==========================================
-# 2. SETUP SASTRAWI
+# 2. THE "SECRET WEAPONS" (NLP Data Structures)
+# ==========================================
+# A. Lexical Normalization (Translasi bahasa gaul/daerah petani)
+slang_dict = {
+    "godhong": "daun", "godong": "daun", "oyot": "akar", "kembang": "bunga", 
+    "pang": "dahan", "rencek": "ranting", "bonggol": "batang", "pentil": "buah", 
+    "benyek": "busuk", "lonyot": "busuk", "bosok": "busuk", "kresek": "hawar", 
+    "bulai": "jamur putih", "kuntet": "kerdil", "macet": "kerdil", "alum": "layu", 
+    "garing": "kering", "tugel": "patah", "gosong": "nekrosis", "item": "hitam", 
+    "ireng": "hitam", "ijo": "hijau", "abang": "merah", "butek": "kusam", 
+    "bolong": "lubang", "bercak2": "bercak", "bintik2": "bintik", "rontok": "gugur", 
+    "keriting": "kerut", "grenjel": "bengkak", "benjol": "bengkak", "nyerang": "serang", 
+    "nular": "tular", "obatin": "obati", "ngobatin": "obati", "nanem": "tanam"
+}
+
+# B. Noise Filtering (Sampah obrolan WA)
+custom_stopwords = [
+    "min", "bang", "dong", "gimana", "cara", "ngobatin", "obatnya", "kok", "kek", 
+    "yg", "ya", "halo", "punten", "nanya", "wkwk", "wkwkwk", "terus", "ada", "bos", 
+    "sih", "deh", "lho", "gan", "juragan", "pak", "bu", "tolong", "bantuannya", "nih"
+]
+
+# C. Semantic Expansion (Sinonim untuk nge-cheat skor Cosine Similarity)
+expansion_dict = {
+    "busuk": "busuk hancur basah berair lonyot benyek membusuk rusak daging",
+    "bercak": "bercak bintik noda karat titik trotol blorok",
+    "nekrosis": "nekrosis gosong hitam gelap mati jaringan terbakar",
+    "kanker": "kanker luka pecah retak getah eksudasi",
+    "hawar": "hawar kresek melepuh",
+    "kerdil": "kerdil kerdilnya kecil lambat stunting macet kuntet hipoplastik",
+    "layu": "layu alum lunglai lemah rebah lemas dehidrasi",
+    "kering": "kering gersang kerontang mati",
+    "klorosis": "klorosis kuning pucat etiolasi memudar",
+    "bengkak": "bengkak benjol tumor puru gall hiperplastik cecidia",
+    "kerut": "keriting keriput melengkung menggulung berkerut kusut",
+    "gugur": "gugur rontok jatuh lepas luruh absisi",
+    "patah": "patah rebah kecambah rapuh putus",
+    "lubang": "lubang bolong tembus keropos dimakan sobek",
+    "jamur": "jamur kapang cendawan putih tepung spora",
+    "hama": "hama ulat serangga kutu tungau wereng walang kumbang",
+    "embun": "embun bulu tepung berbulu putih",
+    "antraknosa": "antraknosa patek colletotrichum",
+    "pucat": "pucat putih terang memudar etiolasi"
+}
+
+# ==========================================
+# 3. SETUP SASTRAWI & MASTER STOPWORDS
 # ==========================================
 stemmer = StemmerFactory().create_stemmer()
-stopword = StopWordRemoverFactory().create_stop_word_remover()
-
-def preprocess_text(text):
-    text = re.sub(r'[^a-zA-Z\s]', '', text).lower()
-    text = stopword.remove(text)
-    text = stemmer.stem(text)
-    return text
+# Ambil list bawaan Sastrawi, lalu gabung sama custom_stopwords buatan kita
+sastrawi_stopword_list = StopWordRemoverFactory().get_stop_words()
+master_stopwords = set(sastrawi_stopword_list + custom_stopwords)
 
 # ==========================================
-# 3. KONEKSI DATABASE MYSQL
+# 4. THE ULTIMATE PREPROCESSING PIPELINE
+# ==========================================
+def preprocess_text(text):
+    # Step 1: Regex Cleansing (Lowercase & hapus tanda baca)
+    text = re.sub(r'[^a-zA-Z\s]', '', text).lower()
+    
+    # Step 2: Tokenization
+    tokens = text.split()
+    
+    # Step 3: Noise Filtering (Buang stopword & kata sapaan WA)
+    tokens = [word for word in tokens if word not in master_stopwords]
+    
+    # Step 4: Lexical Normalization (Translate dialek/slang ke bahasa baku)
+    normalized_tokens = [slang_dict.get(word, word) for word in tokens]
+    
+    # Step 5: Stemming Sastrawi (Kembalikan ke kata dasar)
+    text_joined = " ".join(normalized_tokens)
+    stemmed_text = stemmer.stem(text_joined)
+    
+    # Step 6: Semantic Query Expansion (Suntik sinonim)
+    stemmed_tokens = stemmed_text.split()
+    expanded_tokens = []
+    for word in stemmed_tokens:
+        expanded_tokens.append(word)
+        if word in expansion_dict:
+            # Masukin semua sinonimnya ke dalam array
+            expanded_tokens.extend(expansion_dict[word].split())
+            
+    return " ".join(expanded_tokens)
+
+# ==========================================
+# 5. KONEKSI DATABASE MYSQL
 # ==========================================
 def get_knowledge_base():
     try:
         conn = mysql.connector.connect(
-	host="localhost",
-    	user="agribot",
-    	password="password_kuat_123",
-    	database="db_pertanian"
-	)
+            host="localhost",
+            user="agribot",
+            password="password_kuat_123",
+            database="db_pertanian"
+        )
         df = pd.read_sql("SELECT * FROM knowledge_base", conn)
         conn.close()
         return df
     except Exception as e:
         print(f"❌ Error Database: {e}")
-        return pd.DataFrame() # Return DataFrame kosong jika error
+        return pd.DataFrame() 
 
 # ==========================================
-# 4. GLOBAL INITIALIZATION (Dijalankan SEKALI saat server hidup)
+# 6. GLOBAL INITIALIZATION 
 # ==========================================
 print("⏳ Memuat Knowledge Base dan membangun Model TF-IDF...")
 global_df = get_knowledge_base()
 
 if not global_df.empty:
     global_df['gejala_bersih'] = global_df['gejala'].apply(preprocess_text)
-    vectorizer = TfidfVectorizer()
+    # TF-IDF BUFF: Tambahin ngram_range=(1,2) biar paham konteks dua kata (contoh: "busuk akar")
+    vectorizer = TfidfVectorizer(ngram_range=(1, 2))
     tfidf_matrix = vectorizer.fit_transform(global_df['gejala_bersih'])
     print(f"✅ Knowledge Base ({len(global_df)} data) & Model TF-IDF siap!")
 else:
@@ -72,7 +146,7 @@ else:
 THRESHOLD = 0.20 
 
 # ==========================================
-# 5. ROUTE API UTAMA
+# 7. ROUTE API UTAMA
 # ==========================================
 @app.route('/api/chat', methods=['POST'])
 def chat():
@@ -82,11 +156,9 @@ def chat():
     if not user_message:
         return jsonify({'jawaban': 'Pesan kosong.'})
 
-    # Cek apakah model berhasil dimuat saat startup
     if global_df.empty or vectorizer is None:
         return jsonify({'jawaban': 'Sistem sedang mengalami gangguan. Database Knowledge Base tidak tersedia.'})
 
-    # PROSES LEBIH CEPAT: Langsung pakai model global yang sudah ada di memori
     user_message_clean = preprocess_text(user_message)
     user_vector = vectorizer.transform([user_message_clean])
     
@@ -95,7 +167,6 @@ def chat():
     max_score = cosine_scores.max()
     best_index = cosine_scores.argmax()
 
-    # Logika Hybrid Fallback
     if max_score >= THRESHOLD:
         penyakit = global_df.iloc[best_index]['penyakit']
         solusi = global_df.iloc[best_index]['solusi']
@@ -105,7 +176,6 @@ def chat():
         try:
             prompt = f"Anda adalah pakar pertanian. Seorang petani bertanya: '{user_message}'. Berikan jawaban singkat, ramah, dan solutif khusus di bidang hama dan penyakit tanaman."
             
-            # Memanggil Gemini API
             response = client.models.generate_content(
                 model='gemini-2.5-flash', 
                 contents=prompt
