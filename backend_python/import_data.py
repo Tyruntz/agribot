@@ -2,13 +2,13 @@ import pandas as pd
 import mysql.connector
 
 # 1. BACA LANGSUNG FILE EXCEL ASLINYA (Gak usah di-save ke CSV)
-df = pd.read_excel('dataset_pertanian.xlsx')
+df = pd.read_excel('dataset_agribot_final.csv')
 
 # 2. Konek ke Database
 conn = mysql.connector.connect(
     host="localhost",
-    user="root",
-    password="",
+    user="agribot",
+    password="password_kuat_123",
     database="db_pertanian"
 )
 cursor = conn.cursor()

@@ -285,7 +285,7 @@
         const typingId = showTypingIndicator();
 
         try {
-            const response = await fetch('http://34.101.40.40:5000/api/chat', {
+            const response = await fetch('http://34.128.124.123:5000/api/chat', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ pesan: pesan })

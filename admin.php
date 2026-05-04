@@ -1,7 +1,29 @@
 <?php
+session_start();
+$ADMIN_USER = "admin";
+$ADMIN_PASS = "agribot2026";
+if (isset($_POST["login"])) {
+    if ($_POST["username"] === $ADMIN_USER && $_POST["password"] === $ADMIN_PASS) {
+        $_SESSION["logged_in"] = true;
+    } else {
+        $login_error = "Username atau password salah!";
+    }
+}
+if (isset($_GET["logout"])) {
+    session_destroy();
+    header("Location: admin.php");
+    exit;
+}
+if (!isset($_SESSION["logged_in"]) || !$_SESSION["logged_in"]) {
+    echo "<!DOCTYPE html><html><head><meta charset=UTF-8><title>Login Admin AgriBot</title><style>*{box-sizing:border-box;margin:0;padding:0}body{font-family:sans-serif;background:#f0fdf4;display:flex;align-items:center;justify-content:center;height:100vh}.card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:40px;width:360px}h2{color:#15803d;margin-bottom:24px}label{font-size:13px;color:#475569;display:block;margin-bottom:6px}input{width:100%;padding:10px 12px;border:1px solid #e2e8f0;border-radius:8px;font-size:14px;margin-bottom:16px}button{width:100%;padding:11px;background:#16a34a;color:#fff;border:none;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer}.error{color:#dc2626;font-size:13px;margin-bottom:16px}</style></head><body><div class=card><h2>Admin AgriBot</h2>";
+    if (isset($login_error)) echo "<div class=error>".$login_error."</div>";
+    echo "<form method=POST><label>Username</label><input type=text name=username required><label>Password</label><input type=password name=password required><button type=submit name=login>Masuk</button></form></div></body></html>";
+    exit;
+}
+
 $host = "localhost";
-$user = "root";
-$pass = "";
+$user = "agribot";
+$pass = "password_kuat_123";
 $db   = "db_pertanian";
 
 $conn = new mysqli($host, $user, $pass, $db);
@@ -55,7 +77,7 @@ $total_data  = $row_count['total'];
 
 $unique_result = $conn->query("SELECT COUNT(DISTINCT penyakit) AS unique_count FROM knowledge_base");
 $unique_row    = $unique_result->fetch_assoc();
-$unique_count  = $unique_row['unique_count'];
+$unique_count  = $unique_row["unique_count"];
 ?>
 <!DOCTYPE html>
 <html lang="id">
@@ -233,6 +255,10 @@ tr:hover td{background:var(--slate-50)}
         <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="1" y="1" width="14" height="14" rx="2"/><path d="M1 6h14M6 6v8"/></svg>
         Lihat Semua Data
       </a>
+<a href="admin.php?logout=1" class="nav-item" style="color:#ef4444">
+    <svg viewBox="0 0 16 16" fill="currentColor"><path d="M6 2H3a1 1 0 00-1 1v10a1 1 0 001 1h3M10 5l3 3-3 3M13 8H6"/></svg>
+    Logout
+</a>
     </div>
   </div>
 

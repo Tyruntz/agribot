@@ -11,6 +11,7 @@ from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
 from Sastrawi.StopWordRemover.StopWordRemoverFactory import StopWordRemoverFactory
 from google import genai # <--- Pakai SDK Baru
 import re
+import os
 
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})
@@ -18,7 +19,7 @@ CORS(app, resources={r"/*": {"origins": "*"}})
 # ==========================================
 # 1. SETUP GEMINI API (VERSI TERBARU)
 # ==========================================
-GEMINI_API_KEY = "AIzaSyC6HCkAGW56u74CnED3mJOGs_zJGFusbzA"
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 client = genai.Client(api_key=GEMINI_API_KEY)
 
 # ==========================================
@@ -39,11 +40,11 @@ def preprocess_text(text):
 def get_knowledge_base():
     try:
         conn = mysql.connector.connect(
-            host="localhost",
-            user="root",
-            password="", 
-            database="db_pertanian"
-        )
+	host="localhost",
+    	user="agribot",
+    	password="password_kuat_123",
+    	database="db_pertanian"
+	)
         df = pd.read_sql("SELECT * FROM knowledge_base", conn)
         conn.close()
         return df
