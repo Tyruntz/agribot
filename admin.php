@@ -1,14 +1,88 @@
 <?php
+session_start();
+
+// Konfigurasi Kredensial Login Admin
+$ADMIN_USER = "admin";
+$ADMIN_PASS = "agribot2026";
+$login_error = "";
+
+// 1. Logika Login dengan PRG (Post/Redirect/Get) Pattern
+if (isset($_POST["login"])) {
+    if ($_POST["username"] === $ADMIN_USER && $_POST["password"] === $ADMIN_PASS) {
+        $_SESSION["logged_in"] = true;
+        // FIX: Tambahkan redirect agar tidak terjadi form resubmission
+        header("Location: admin.php");
+        exit;
+    } else {
+        $login_error = "Username atau password salah!";
+    }
+}
+
+// 2. Logika Logout
+if (isset($_GET["logout"])) {
+    session_destroy();
+    header("Location: admin.php");
+    exit;
+}
+
+// 3. Tampilan Halaman Login (Dipisah dari echo satu baris agar rapi)
+if (!isset($_SESSION["logged_in"]) || !$_SESSION["logged_in"]) {
+    ?>
+    <!DOCTYPE html>
+    <html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login Admin AgriBot</title>
+        <style>
+            * { box-sizing: border-box; margin: 0; padding: 0; }
+            body { font-family: sans-serif; background: #f0fdf4; display: flex; align-items: center; justify-content: center; height: 100vh; }
+            .card { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 40px; width: 360px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
+            h2 { color: #15803d; margin-bottom: 24px; text-align: center; }
+            label { font-size: 13px; color: #475569; display: block; margin-bottom: 6px; font-weight: 600; }
+            input { width: 100%; padding: 10px 12px; border: 1px solid #e2e8f0; border-radius: 8px; font-size: 14px; margin-bottom: 16px; outline: none; }
+            input:focus { border-color: #16a34a; }
+            button { width: 100%; padding: 11px; background: #16a34a; color: #fff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; transition: background 0.2s; }
+            button:hover { background: #15803d; }
+            .error { color: #dc2626; background: #fef2f2; border: 1px solid #fecaca; padding: 10px; border-radius: 6px; font-size: 13px; margin-bottom: 16px; text-align: center; }
+        </style>
+    </head>
+    <body>
+        <div class="card">
+            <h2>Admin AgriBot</h2>
+            <?php if (!empty($login_error)): ?>
+                <div class="error"><?= $login_error ?></div>
+            <?php endif; ?>
+            <form method="POST" action="">
+                <label>Username</label>
+                <input type="text" name="username" required>
+                <label>Password</label>
+                <input type="password" name="password" required>
+                <button type="submit" name="login">Masuk</button>
+            </form>
+        </div>
+    </body>
+    </html>
+    <?php
+    exit;
+}
+
+// ==========================================
+// AREA DI BAWAH INI HANYA BISA DIAKSES JIKA SUDAH LOGIN
+// ==========================================
+
+// 4. Koneksi Database
 $host = "localhost";
-$user = "root";
-$pass = "";
+$user = "agribot";
+$pass = "password_kuat_123";
 $db   = "db_pertanian";
 
 $conn = new mysqli($host, $user, $pass, $db);
 if ($conn->connect_error) {
-    die("Koneksi gagal: " . $conn->connect_error);
+    die("Koneksi database gagal. Pastikan MySQL menyala: " . $conn->connect_error);
 }
 
+// 5. Aksi Tambah Data Manual
 if (isset($_POST['tambah'])) {
     $penyakit = $conn->real_escape_string($_POST['penyakit']);
     $gejala   = $conn->real_escape_string($_POST['gejala']);
@@ -19,6 +93,7 @@ if (isset($_POST['tambah'])) {
     exit;
 }
 
+// 6. Aksi Import CSV
 if (isset($_POST['import_csv'])) {
     if ($_FILES['file_csv']['size'] > 0) {
         $file   = $_FILES['file_csv']['tmp_name'];
@@ -41,6 +116,7 @@ if (isset($_POST['import_csv'])) {
     }
 }
 
+// 7. Aksi Hapus Data
 if (isset($_GET['hapus'])) {
     $id = (int)$_GET['hapus'];
     $conn->query("DELETE FROM knowledge_base WHERE id=$id");
@@ -48,15 +124,19 @@ if (isset($_GET['hapus'])) {
     exit;
 }
 
-$result      = $conn->query("SELECT * FROM knowledge_base ORDER BY id DESC");
+// 8. Ambil Data untuk View Dashboard (FIX: Ditambah validasi query agar tidak Fatal Error)
+$result = $conn->query("SELECT * FROM knowledge_base ORDER BY id DESC");
+if (!$result) {
+    die("Error Database: Tabel 'knowledge_base' tidak ditemukan atau ada yang salah dengan struktur DB. (" . $conn->error . ")");
+}
+
 $count_result = $conn->query("SELECT COUNT(*) AS total FROM knowledge_base");
-$row_count   = $count_result->fetch_assoc();
-$total_data  = $row_count['total'];
+$total_data = $count_result ? $count_result->fetch_assoc()['total'] : 0;
 
 $unique_result = $conn->query("SELECT COUNT(DISTINCT penyakit) AS unique_count FROM knowledge_base");
-$unique_row    = $unique_result->fetch_assoc();
-$unique_count  = $unique_row['unique_count'];
+$unique_count = $unique_result ? $unique_result->fetch_assoc()["unique_count"] : 0;
 ?>
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -65,6 +145,7 @@ $unique_count  = $unique_row['unique_count'];
 <title>Admin Panel · AgriBot</title>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
+/* CSS BAWAAN LO YANG UDAH BAGUS TETAP PERTAHANKAN DI SINI */
 *{box-sizing:border-box;margin:0;padding:0}
 :root{
   --green-50:#f0fdf4;--green-100:#dcfce7;--green-200:#bbf7d0;--green-300:#86efac;
@@ -78,7 +159,6 @@ $unique_count  = $unique_row['unique_count'];
 }
 body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--slate-50);color:var(--slate-800);font-size:14px;line-height:1.5;display:flex;min-height:100vh}
 
-/* ── SIDEBAR ── */
 .sidebar{width:240px;background:#fff;border-right:1px solid var(--slate-200);display:flex;flex-direction:column;position:fixed;height:100vh;z-index:50}
 .brand{padding:20px 20px 16px;border-bottom:1px solid var(--slate-100)}
 .brand-logo{display:flex;align-items:center;gap:10px}
@@ -98,7 +178,6 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--slate-50);color
 .dot{width:7px;height:7px;background:var(--green-500);border-radius:50%;box-shadow:0 0 0 2px var(--green-200);flex-shrink:0}
 .status-text{font-size:12px;color:var(--green-700);font-weight:600}
 
-/* ── MAIN ── */
 .main{margin-left:240px;flex:1;display:flex;flex-direction:column;min-height:100vh}
 .topbar{background:#fff;border-bottom:1px solid var(--slate-200);padding:14px 28px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:40}
 .topbar-title{font-size:16px;font-weight:700;color:var(--slate-900)}
@@ -106,7 +185,6 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--slate-50);color
 .badge-records{background:var(--green-50);color:var(--green-700);border:1px solid var(--green-200);padding:5px 14px;border-radius:20px;font-size:12px;font-weight:700;font-family:'JetBrains Mono',monospace}
 .content{padding:24px 28px}
 
-/* ── ALERTS ── */
 .alert{border-radius:var(--radius);padding:12px 16px;display:flex;align-items:center;gap:10px;margin-bottom:20px;font-size:13px;font-weight:500}
 .alert-success{background:var(--green-50);border:1px solid var(--green-200);color:var(--green-700)}
 .alert-deleted{background:#fff7ed;border:1px solid #fed7aa;color:#c2410c}
@@ -115,7 +193,6 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--slate-50);color
 .alert-deleted .alert-icon{background:#ea580c}
 .alert-icon svg{width:11px;height:11px;fill:white}
 
-/* ── METRICS ── */
 .metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:22px}
 .metric-card{background:#fff;border:1px solid var(--slate-200);border-radius:var(--radius);padding:18px 20px}
 .metric-card.green{border-color:var(--green-200);background:var(--green-50)}
@@ -126,7 +203,6 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--slate-50);color
 .metric-sub{font-size:12px;color:var(--slate-400);margin-top:6px}
 .metric-sub b{color:var(--green-600);font-weight:600}
 
-/* ── FORM GRID ── */
 .form-row{display:grid;grid-template-columns:1.1fr .9fr;gap:16px;margin-bottom:20px}
 .panel{background:#fff;border:1px solid var(--slate-200);border-radius:var(--radius);overflow:hidden}
 .panel-head{padding:14px 18px;border-bottom:1px solid var(--slate-100);display:flex;align-items:center;gap:10px}
@@ -150,7 +226,6 @@ input::placeholder,textarea::placeholder{color:var(--slate-300)}
 .btn-outline:hover{background:var(--green-50)}
 .btn-outline svg{stroke:var(--green-700);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 
-/* ── IMPORT ZONE ── */
 .import-zone{border:1.5px dashed var(--slate-300);border-radius:var(--radius-sm);padding:20px;text-align:center;background:var(--slate-50);margin-bottom:14px;cursor:pointer;transition:all .2s}
 .import-zone:hover{border-color:var(--green-400);background:var(--green-50)}
 .import-zone-icon{width:36px;height:36px;background:var(--slate-200);border-radius:8px;display:flex;align-items:center;justify-content:center;margin:0 auto 10px}
@@ -166,7 +241,6 @@ input[type=file]{display:none}
 .warning-title{font-size:11px;font-weight:700;color:var(--amber-600);margin-bottom:3px}
 .warning-text{font-size:11px;color:var(--amber-600)}
 
-/* ── TABLE PANEL ── */
 .table-panel{background:#fff;border:1px solid var(--slate-200);border-radius:var(--radius);overflow:hidden}
 .table-head-row{padding:14px 18px;border-bottom:1px solid var(--slate-100);display:flex;align-items:center;justify-content:space-between;gap:12px}
 .table-head-left{display:flex;align-items:center;gap:10px}
@@ -308,6 +382,10 @@ tr:hover td{background:var(--slate-50)}
         <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="1" y="1" width="14" height="14" rx="2"/><path d="M1 6h14M6 6v8"/></svg>
         Lihat Semua Data
       </a>
+<a href="admin.php?logout=1" class="nav-item" style="color:#ef4444">
+    <svg viewBox="0 0 16 16" fill="currentColor"><path d="M6 2H3a1 1 0 00-1 1v10a1 1 0 001 1h3M10 5l3 3-3 3M13 8H6"/></svg>
+    Logout
+</a>
     </div>
   </div>
 
@@ -467,13 +545,15 @@ tr:hover td{background:var(--slate-50)}
           <tbody id="table-body">
             <?php
             $rows = [];
-            while ($row = $result->fetch_assoc()) { $rows[] = $row; }
+            if ($result && $result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) { $rows[] = $row; }
+            }
             if (empty($rows)):
             ?>
             <tr><td colspan="5">
               <div class="empty-state">
                 <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M9 21V9"/></svg>
-                <p>Belum ada data. Tambahkan melalui form di atas.</p>
+                <p>Belum ada data atau tabel belum dibuat. Tambahkan melalui form di atas.</p>
               </div>
             </td></tr>
             <?php else: foreach ($rows as $row): ?>
