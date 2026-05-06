@@ -28,11 +28,11 @@
             overflow-x: hidden;
         }
 
-        /* Navbar - Ultra Clean */
+        /* Navbar */
         .navbar {
             background-color: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
-            padding: 20px 10%;
+            padding: 16px 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -44,7 +44,7 @@
         }
 
         .logo {
-            font-size: 22px;
+            font-size: 20px;
             font-weight: 700;
             color: var(--primary-dark);
             text-decoration: none;
@@ -57,17 +57,15 @@
         .nav-links a {
             text-decoration: none;
             color: var(--text-muted);
-            margin-left: 30px;
+            margin-left: 24px;
             font-weight: 500;
-            font-size: 15px;
+            font-size: 14px;
             transition: all 0.3s ease;
         }
 
-        .nav-links a:hover { 
-            color: var(--primary-main); 
-        }
+        .nav-links a:hover { color: var(--primary-main); }
 
-        /* Hero Section - Premium Vibe */
+        /* Hero Section */
         .hero {
             display: flex;
             flex-direction: column;
@@ -75,7 +73,7 @@
             justify-content: center;
             text-align: center;
             min-height: 90vh;
-            padding: 120px 20px 60px;
+            padding: 120px 5% 60px;
             background: radial-gradient(circle at top, #E9F4ED 0%, var(--bg-color) 70%);
         }
 
@@ -84,14 +82,14 @@
             color: var(--primary-main);
             padding: 8px 16px;
             border-radius: 20px;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 600;
             margin-bottom: 24px;
             letter-spacing: 0.5px;
         }
 
         .hero h1 {
-            font-size: 52px;
+            font-size: clamp(28px, 6vw, 52px);
             font-weight: 700;
             color: var(--primary-dark);
             margin: 0 0 20px;
@@ -100,7 +98,7 @@
         }
 
         .hero p {
-            font-size: 18px;
+            font-size: clamp(15px, 2.5vw, 18px);
             color: var(--text-muted);
             max-width: 600px;
             margin-bottom: 40px;
@@ -108,18 +106,19 @@
             font-weight: 300;
         }
 
-        /* CTA Button - Sleek Gradient */
+        /* CTA Button */
         .btn-primary {
             background: linear-gradient(135deg, var(--primary-main) 0%, var(--primary-dark) 100%);
             color: white;
-            padding: 16px 44px;
+            padding: 15px 40px;
             border-radius: 50px;
             text-decoration: none;
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 600;
             box-shadow: 0 10px 20px rgba(16, 69, 29, 0.15);
             transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
             border: 1px solid rgba(255,255,255,0.1);
+            display: inline-block;
         }
 
         .btn-primary:hover {
@@ -127,21 +126,18 @@
             box-shadow: 0 15px 25px rgba(16, 69, 29, 0.25);
         }
 
-        /* Features Section - Soft Cards */
+        /* Features Section */
         .features {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            padding: 60px 10% 100px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+            padding: 60px 5% 80px;
             background: var(--bg-color);
-            flex-wrap: wrap;
         }
 
         .feature-card {
-            flex: 1;
-            min-width: 280px;
             text-align: left;
-            padding: 40px 30px;
+            padding: 32px 28px;
             border-radius: 24px;
             background: #ffffff;
             box-shadow: 0 10px 40px rgba(0,0,0,0.03);
@@ -150,32 +146,32 @@
         }
 
         .feature-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-4px);
             box-shadow: 0 20px 40px rgba(0,0,0,0.06);
         }
 
         .feature-icon-wrapper {
-            width: 60px;
-            height: 60px;
+            width: 56px;
+            height: 56px;
             background: #F0F7F2;
-            border-radius: 16px;
+            border-radius: 14px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 28px;
-            margin-bottom: 24px;
+            font-size: 26px;
+            margin-bottom: 20px;
         }
 
         .feature-card h3 { 
             color: var(--primary-dark);
-            font-size: 20px;
-            margin: 0 0 12px;
+            font-size: 18px;
+            margin: 0 0 10px;
             font-weight: 600;
         }
 
         .feature-card p {
             color: var(--text-muted);
-            font-size: 15px;
+            font-size: 14px;
             line-height: 1.6;
             margin: 0;
         }
@@ -183,11 +179,28 @@
         /* Footer */
         .footer {
             text-align: center;
-            padding: 30px;
+            padding: 24px 5%;
             background: #ffffff;
             color: var(--text-muted);
-            font-size: 14px;
+            font-size: 13px;
             border-top: 1px solid #edf2f0;
+        }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 768px) {
+            .navbar { padding: 14px 5%; }
+            .nav-links { display: none; }
+            .hero { padding: 100px 6% 50px; min-height: 85vh; }
+            .hero h1 { font-size: 28px; letter-spacing: -0.5px; }
+            .hero p { font-size: 15px; }
+            .btn-primary { padding: 14px 32px; font-size: 15px; width: 100%; max-width: 320px; text-align: center; }
+            .features { padding: 40px 5% 60px; gap: 16px; grid-template-columns: 1fr; }
+            .feature-card { padding: 24px 20px; }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 { font-size: 24px; }
+            .hero-badge { font-size: 12px; padding: 6px 14px; }
         }
     </style>
 </head>

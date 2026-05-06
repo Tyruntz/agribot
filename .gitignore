@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+env/
+.env
+*.egg-info/
+
+# Dataset & file data besar
+*.xlsx
+*.csv
+*.pdf
+backend_python/dataset_pertanian.*
+backend_python/dataset_agribot_*.csv
+backend_python/stress_test.csv
+data/
+
+# File output & hasil generate
+backend_python/*.png
+backend_python/enrichment_diff.txt
+backend_python/data-stress-test.txt
+backend_python/generate_semua_grafik.py
+backend_python/generate_grafik_final.py
+
+# Model machine learning (jika ada)
+*.pkl
+*.joblib
+*.h5
+*.model
+
+# ZIP & arsip
+*.zip
+*.rar
+*.tar.gz
+
+# Log
+*.log
+
+# OS & editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

@@ -192,11 +192,86 @@ tr:hover td{background:var(--slate-50)}
 .empty-state svg{width:36px;height:36px;stroke:var(--slate-200);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;margin:0 auto 10px;display:block}
 .empty-state p{font-size:13px}
 .table-footer{padding:12px 18px;border-top:1px solid var(--slate-100);font-size:12px;color:var(--slate-400);display:flex;align-items:center;justify-content:space-between;background:var(--slate-50)}
+
+/* ── HAMBURGER ── */
+.hamburger{display:none;background:none;border:1px solid var(--slate-200);cursor:pointer;padding:7px 9px;border-radius:6px;color:var(--slate-600);align-items:center;justify-content:center;flex-shrink:0}
+.hamburger svg{width:18px;height:18px;stroke:var(--slate-600);fill:none;stroke-width:2;stroke-linecap:round;display:block}
+
+/* ── OVERLAY ── */
+.sidebar-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.45);z-index:48}
+.sidebar-overlay.active{display:block}
+
+/* ── TABLET (≤1024px) ── */
+@media(max-width:1024px){
+  .metrics{grid-template-columns:repeat(2,1fr)}
+  .form-row{grid-template-columns:1fr}
+}
+
+/* ── MOBILE (≤768px) ── */
+@media(max-width:768px){
+  body{display:block}
+
+  /* sidebar jadi drawer tersembunyi */
+  .sidebar{
+    position:fixed;
+    top:0;left:-260px;
+    height:100%;width:240px;
+    transition:left .25s ease;
+    z-index:50;
+    overflow-y:auto
+  }
+  .sidebar.open{left:0 !important}
+
+  /* main full width */
+  .main{margin-left:0;display:flex;flex-direction:column;min-height:100vh}
+
+  /* topbar: tampilkan hamburger */
+  .hamburger{display:flex}
+  .topbar{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:12px 16px;
+    position:sticky;top:0;z-index:40
+  }
+  .topbar > div{flex:1;min-width:0}
+  .topbar-title{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .topbar-sub{display:none}
+  .badge-records{font-size:11px;padding:4px 10px;white-space:nowrap}
+
+  /* content */
+  .content{padding:14px}
+  .metrics{grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:16px}
+  .metric-card{padding:14px 16px}
+  .metric-value{font-size:22px}
+  .metric-sub{font-size:11px}
+
+  /* form */
+  .form-row{grid-template-columns:1fr;gap:12px;margin-bottom:14px}
+  .panel-body{padding:14px}
+  .panel-head{padding:12px 14px}
+
+  /* table */
+  .table-head-row{flex-wrap:wrap;gap:8px;padding:10px 12px}
+  .search-box{width:100%;flex:none}
+  .search-box input{width:100%;min-width:0;flex:1}
+  .table-wrapper{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  table{min-width:520px}
+  .table-footer{flex-direction:column;gap:4px;text-align:center;font-size:11px}
+}
+
+/* ── SMALL PHONE (≤480px) ── */
+@media(max-width:480px){
+  .metrics{grid-template-columns:1fr}
+  .topbar{padding:10px 12px}
+  .content{padding:10px}
+}
 </style>
 </head>
 <body>
 
-<div class="sidebar">
+<div class="sidebar-overlay" id="sidebar-overlay" onclick="closeSidebar()"></div>
+<div class="sidebar" id="sidebar">
   <div class="brand">
     <div class="brand-logo">
       <div class="brand-icon">
@@ -246,6 +321,9 @@ tr:hover td{background:var(--slate-50)}
 
 <div class="main">
   <div class="topbar">
+    <button class="hamburger" onclick="toggleSidebar()" aria-label="Menu">
+      <svg viewBox="0 0 20 20"><path d="M2 5h16M2 10h16M2 15h16"/></svg>
+    </button>
     <div>
       <div class="topbar-title">Dataset Control Panel</div>
       <div class="topbar-sub">Kelola knowledge base dan konfigurasi algoritma TF-IDF</div>
@@ -429,6 +507,24 @@ tr:hover td{background:var(--slate-50)}
 </div>
 
 <script>
+function toggleSidebar(){
+  var s=document.getElementById('sidebar');
+  var o=document.getElementById('sidebar-overlay');
+  s.classList.toggle('open');
+  o.classList.toggle('active');
+}
+function closeSidebar(){
+  document.getElementById('sidebar').classList.remove('open');
+  document.getElementById('sidebar-overlay').classList.remove('active');
+}
+
+// Tutup sidebar kalau klik nav link di mobile
+document.querySelectorAll('.nav-item').forEach(function(el){
+  el.addEventListener('click', function(){
+    if(window.innerWidth <= 768) closeSidebar();
+  });
+});
+
 function filterTable() {
   const q = document.getElementById('search-input').value.toLowerCase().trim();
   const rows = document.querySelectorAll('.data-row');
