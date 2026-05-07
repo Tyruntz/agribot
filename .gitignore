@@ -43,3 +43,6 @@ backend_python/generate_grafik_final.py
 Thumbs.db
 .vscode/
 .idea/
+
+.env
+backend_python/.env
