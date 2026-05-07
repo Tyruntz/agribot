@@ -269,7 +269,10 @@ def chat():
             jawaban_final = f"**Berdasarkan Pakar AI (Gemini):**\n{response.text}"
             sumber = "Gemini API"
         except Exception as e:
-            print(f"========== ERROR GEMINI ==========\n{e}\n==================================")
+            import traceback
+            print(f"========== ERROR GEMINI ==========")
+            print(traceback.format_exc())
+            print(f"==================================")
             jawaban_final = "Maaf, sistem AI sedang sibuk atau API key bermasalah."
             sumber = "Error"
 
