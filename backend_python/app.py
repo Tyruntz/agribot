@@ -1,6 +1,7 @@
 import warnings
 warnings.filterwarnings("ignore")
 
+import os
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import mysql.connector
@@ -18,7 +19,7 @@ CORS(app, resources={r"/*": {"origins": "*"}})
 # ==========================================
 # 1. SETUP GEMINI API
 # ==========================================
-GEMINI_API_KEY = "AIzaSyC6HCkAGW56u74CnED3mJOGs_zJGFusbzA"
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 client = genai.Client(api_key=GEMINI_API_KEY)
 
 # ==========================================
@@ -139,7 +140,7 @@ def apply_commodity_boost(scores, raw_query, df_kb, col_penyakit=None):
 def get_knowledge_base():
     try:
         conn = mysql.connector.connect(
-            host="localhost", user="root", password="", database="db_pertanian"
+            host=os.environ.get("DB_HOST","localhost"), user=os.environ.get("DB_USER","root"), password=os.environ.get("DB_PASS",""), database=os.environ.get("DB_NAME","db_pertanian")
         )
         df = pd.read_sql("SELECT * FROM knowledge_base", conn)
         conn.close()
@@ -231,7 +232,7 @@ def chat():
     if not user_message:
         return jsonify({'jawaban': 'Pesan kosong.'})
 
-    if global_df.empty or vectorizer is None:
+    if 'global_df' not in globals() or global_df is None or global_df.empty or vectorizer is None:
         return jsonify({'jawaban': 'Sistem sedang mengalami gangguan. Database Knowledge Base tidak tersedia.'})
 
     # Layer 1 + 2: Normalisasi slang + preprocessing query
