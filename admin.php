@@ -10,8 +10,9 @@ register_shutdown_function(function () {
 session_start();
 
 // Konfigurasi Kredensial Login Admin
-$ADMIN_USER = "admin";
-$ADMIN_PASS = "agribot2026";
+require_once '/var/www/html/config.php';
+$ADMIN_USER = ADMIN_USER;
+$ADMIN_PASS = ADMIN_PASS;
 $login_error = "";
 
 // 1. Logika Login dengan PRG (Post/Redirect/Get) Pattern
@@ -80,10 +81,10 @@ if (!isset($_SESSION["logged_in"]) || !$_SESSION["logged_in"]) {
 // ==========================================
 
 // 4. Koneksi Database
-$host = "localhost";
-$user = "agribot";
-$pass = "password_kuat_123";
-$db   = "db_pertanian";
+$host = DB_HOST;
+$user = DB_USER;
+$pass = DB_PASS;
+$db   = DB_NAME;
 
 $conn = new mysqli($host, $user, $pass, $db);
 if ($conn->connect_error) {
