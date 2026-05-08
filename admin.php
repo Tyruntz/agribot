@@ -1,9 +1,18 @@
 <?php
+ini_set('display_errors', 0);
+error_reporting(E_ALL);
+register_shutdown_function(function () {
+    $e = error_get_last();
+    if ($e) {
+        file_put_contents('/tmp/php_fatal.log', print_r($e, true), FILE_APPEND);
+    }
+});
 session_start();
 
 // Konfigurasi Kredensial Login Admin
-$ADMIN_USER = "admin";
-$ADMIN_PASS = "agribot2026";
+require_once '/var/www/html/config.php';
+$ADMIN_USER = ADMIN_USER;
+$ADMIN_PASS = ADMIN_PASS;
 $login_error = "";
 
 // 1. Logika Login dengan PRG (Post/Redirect/Get) Pattern
@@ -72,10 +81,10 @@ if (!isset($_SESSION["logged_in"]) || !$_SESSION["logged_in"]) {
 // ==========================================
 
 // 4. Koneksi Database
-$host = "localhost";
-$user = "agribot";
-$pass = "password_kuat_123";
-$db   = "db_pertanian";
+$host = DB_HOST;
+$user = DB_USER;
+$pass = DB_PASS;
+$db   = DB_NAME;
 
 $conn = new mysqli($host, $user, $pass, $db);
 if ($conn->connect_error) {
@@ -545,9 +554,18 @@ tr:hover td{background:var(--slate-50)}
           <tbody id="table-body">
             <?php
             $rows = [];
-            if ($result && $result->num_rows > 0) {
-                while ($row = $result->fetch_assoc()) { $rows[] = $row; }
-            }
+            $rows = [];
+	    if ($result && $result->num_rows > 0) {
+   		 while ($row = $result->fetch_assoc()) {
+    			foreach ($row as $k => $v) {
+       				$row[$k] = mb_convert_encoding(
+            				str_replace(["\r\n", "\r", "\n"], ' ', (string)$v),
+           				 'UTF-8', 'UTF-8'
+       				 );
+   			 }
+    			$rows[] = $row;
+		}
+		}
             if (empty($rows)):
             ?>
             <tr><td colspan="5">
@@ -563,7 +581,7 @@ tr:hover td{background:var(--slate-50)}
               <td><span class="id-badge"><?= sprintf("%04d", $row['id']) ?></span></td>
               <td><span class="disease-name"><?= htmlspecialchars($row['penyakit']) ?></span></td>
               <td><span class="gejala-text"><?= htmlspecialchars($row['gejala']) ?></span></td>
-              <td><span class="solusi-text"><?= htmlspecialchars(mb_strimwidth($row['solusi'], 0, 80, "...")) ?></span></td>
+              <td><span class="solusi-text"><?= htmlspecialchars(mb_convert_encoding(mb_strimwidth($row['solusi'], 0, 80, '...'), 'UTF-8', 'UTF-8'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8') ?></span></td>
               <td>
                 <a href="admin.php?hapus=<?= $row['id'] ?>"
                    class="btn-drop"

@@ -115,6 +115,42 @@ def detect_commodity(raw_query):
                 return commodity
     return None
 
+def is_commodity_in_kb(raw_query):
+    """
+    Cek apakah komoditas yang disebut user ada di KB.
+    Kalau tidak ada → langsung fallback Gemini.
+    Kalau tidak sebut komoditas apapun → biarkan TF-IDF jalan normal.
+    """
+    KB_COMMODITIES = [
+        'bayam', 'bayem',
+        'cabai', 'cabe',
+        'kubis', 'kol',
+        'bawang merah', 'brambang',
+        'anggur',
+        'apel',
+    ]
+    raw_lower = raw_query.lower()
+    
+    # Deteksi apakah user menyebut komoditas apapun
+    ALL_COMMODITY_HINTS = [
+        'bayam', 'bayem', 'cabai', 'cabe', 'kubis', 'kol',
+        'bawang', 'brambang', 'anggur', 'apel',
+        'singkong', 'tomat', 'jagung', 'padi', 'kopi', 'kakao',
+        'pisang', 'mangga', 'jeruk', 'semangka', 'melon', 'wortel',
+        'kentang', 'terong', 'timun', 'kangkung', 'sawi', 'seledri',
+        'buncis', 'kacang', 'ubi', 'talas', 'jahe', 'kunyit',
+    ]
+    
+    user_mentioned_commodity = any(hint in raw_lower for hint in ALL_COMMODITY_HINTS)
+    
+    # Kalau user tidak sebut komoditas apapun → biarkan TF-IDF jalan
+    if not user_mentioned_commodity:
+        return True
+    
+    # Kalau user sebut komoditas tapi bukan yang ada di KB → Gemini
+    in_kb = any(c in raw_lower for c in KB_COMMODITIES)
+    return in_kb
+
 def apply_commodity_boost(scores, raw_query, df_kb, col_penyakit=None):
     """Terapkan boost/penalti berdasarkan komoditas yang terdeteksi."""
     detected = detect_commodity(raw_query)
@@ -232,8 +268,32 @@ def chat():
     if not user_message:
         return jsonify({'jawaban': 'Pesan kosong.'})
 
-    if global_df.empty or vectorizer is None:
+    if 'global_df' not in globals() or global_df is None or global_df.empty or vectorizer is None:
         return jsonify({'jawaban': 'Sistem sedang mengalami gangguan. Database Knowledge Base tidak tersedia.'})
+
+    # Layer 1 + 2: Normalisasi slang + preprocessing query
+    # Cek komoditas — kalau disebut tapi tidak ada di KB, langsung Gemini
+    if not is_commodity_in_kb(user_message):
+        try:
+            prompt = (
+                f"Anda adalah pakar pertanian. Seorang petani bertanya: '{user_message}'. "
+                f"Berikan jawaban singkat, ramah, dan solutif khusus di bidang hama dan penyakit tanaman."
+            )
+            response = client.models.generate_content(
+                model='gemini-2.5-flash', contents=prompt)
+            return jsonify({
+                'jawaban': f"**Berdasarkan Pakar AI (Gemini):**\n{response.text}",
+                'sumber': 'Gemini API',
+                'skor': 0.0
+            })
+        except Exception as e:
+            import traceback
+            print(traceback.format_exc())
+            return jsonify({
+                'jawaban': 'Maaf, sistem AI sedang sibuk atau API key bermasalah.',
+                'sumber': 'Error',
+                'skor': 0.0
+            })
 
     # Layer 1 + 2: Normalisasi slang + preprocessing query
     user_message_clean = preprocess_text(user_message, use_slang=True)
@@ -271,7 +331,10 @@ def chat():
             jawaban_final = f"**Berdasarkan Pakar AI (Gemini):**\n{response.text}"
             sumber = "Gemini API"
         except Exception as e:
-            print(f"========== ERROR GEMINI ==========\n{e}\n==================================")
+            import traceback
+            print(f"========== ERROR GEMINI ==========")
+            print(traceback.format_exc())
+            print(f"==================================")
             jawaban_final = "Maaf, sistem AI sedang sibuk atau API key bermasalah."
             sumber = "Error"
 
