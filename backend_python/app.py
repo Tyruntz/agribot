@@ -276,16 +276,13 @@ def chat():
     if not is_commodity_in_kb(user_message):
         try:
             prompt = (
-                f"Anda adalah pakar pertanian Indonesia. Jawab pertanyaan petani berikut dengan SINGKAT, "
-                f"JELAS, dan PRAKTIS. Format jawaban: "
-                f"1) Nama masalah/penyebab utama, "
-                f"2) Gejala khas, "
-                f"3) Solusi praktis 2-3 langkah. "
-                f"Maksimal 5-6 kalimat total, tidak perlu pembuka atau penutup basa-basi. "
-                f"Pertanyaan petani: '{user_message}'"
+                f"Kamu adalah asisten pertanian. Jawab singkat maksimal 4 kalimat. "
+                f"Sebutkan: penyebab utama, gejala, dan solusi praktis. "
+                f"Gunakan bahasa Indonesia sederhana yang mudah dipahami petani. "
+                f"Pertanyaan: '{user_message}'"
             )
             response = client.models.generate_content(
-                model='gemini-2.5-flash', contents=prompt, config={'max_output_tokens': 500})
+                model='gemini-2.5-flash', contents=prompt, config={'max_output_tokens': 800})
             return jsonify({
                 'jawaban': f"**Berdasarkan Pakar AI (Gemini):**\n{response.text}",
                 'sumber': 'Gemini API',
@@ -326,16 +323,13 @@ def chat():
     else:
         try:
             prompt = (
-                f"Anda adalah pakar pertanian Indonesia. Jawab pertanyaan petani berikut dengan SINGKAT, "
-                f"JELAS, dan PRAKTIS. Format jawaban: "
-                f"1) Nama masalah/penyebab utama, "
-                f"2) Gejala khas, "
-                f"3) Solusi praktis 2-3 langkah. "
-                f"Maksimal 5-6 kalimat total, tidak perlu pembuka atau penutup basa-basi. "
-                f"Pertanyaan petani: '{user_message}'"
+                f"Kamu adalah asisten pertanian. Jawab singkat maksimal 4 kalimat. "
+                f"Sebutkan: penyebab utama, gejala, dan solusi praktis. "
+                f"Gunakan bahasa Indonesia sederhana yang mudah dipahami petani. "
+                f"Pertanyaan: '{user_message}'"
             )
             response = client.models.generate_content(
-                model='gemini-2.5-flash', contents=prompt, config={'max_output_tokens': 500})
+                model='gemini-2.5-flash', contents=prompt, config={'max_output_tokens': 800})
             jawaban_final = f"**Berdasarkan Pakar AI (Gemini):**\n{response.text}"
             sumber = "Gemini API"
         except Exception as e:
