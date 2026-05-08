@@ -326,13 +326,16 @@ def chat():
     else:
         try:
             prompt = (
-                f"Anda adalah pakar pertanian. Jawab pertanyaan petani berikut dengan SINGKAT dan PADAT, "
-                f"maksimal 3-4 kalimat saja. Langsung ke poin utama, tidak perlu pembuka panjang. "
-                f"Fokus pada: nama penyakit/hama, penyebab, dan solusi praktis. "
+                f"Anda adalah pakar pertanian Indonesia. Jawab pertanyaan petani berikut dengan SINGKAT, "
+                f"JELAS, dan PRAKTIS. Format jawaban: "
+                f"1) Nama masalah/penyebab utama, "
+                f"2) Gejala khas, "
+                f"3) Solusi praktis 2-3 langkah. "
+                f"Maksimal 5-6 kalimat total, tidak perlu pembuka atau penutup basa-basi. "
                 f"Pertanyaan petani: '{user_message}'"
             )
             response = client.models.generate_content(
-                model='gemini-2.5-flash', contents=prompt, config={'max_output_tokens': 300})
+                model='gemini-2.5-flash', contents=prompt, config={'max_output_tokens': 500})
             jawaban_final = f"**Berdasarkan Pakar AI (Gemini):**\n{response.text}"
             sumber = "Gemini API"
         except Exception as e:
