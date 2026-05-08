@@ -1,6 +1,7 @@
 import warnings
 warnings.filterwarnings("ignore")
 
+import os
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import mysql.connector
@@ -18,7 +19,7 @@ CORS(app, resources={r"/*": {"origins": "*"}})
 # ==========================================
 # 1. SETUP GEMINI API
 # ==========================================
-GEMINI_API_KEY = "AIzaSyC6HCkAGW56u74CnED3mJOGs_zJGFusbzA"
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 client = genai.Client(api_key=GEMINI_API_KEY)
 
 # ==========================================
@@ -139,7 +140,7 @@ def apply_commodity_boost(scores, raw_query, df_kb, col_penyakit=None):
 def get_knowledge_base():
     try:
         conn = mysql.connector.connect(
-            host="localhost", user="root", password="", database="db_pertanian"
+            host=os.environ.get("DB_HOST","localhost"), user=os.environ.get("DB_USER","root"), password=os.environ.get("DB_PASS",""), database=os.environ.get("DB_NAME","db_pertanian")
         )
         df = pd.read_sql("SELECT * FROM knowledge_base", conn)
         conn.close()
@@ -260,11 +261,13 @@ def chat():
     else:
         try:
             prompt = (
-                f"Anda adalah pakar pertanian. Seorang petani bertanya: '{user_message}'. "
-                f"Berikan jawaban singkat, ramah, dan solutif khusus di bidang hama dan penyakit tanaman."
+                f"Anda adalah pakar pertanian. Jawab pertanyaan petani berikut dengan SINGKAT dan PADAT, "
+                f"maksimal 3-4 kalimat saja. Langsung ke poin utama, tidak perlu pembuka panjang. "
+                f"Fokus pada: nama penyakit/hama, penyebab, dan solusi praktis. "
+                f"Pertanyaan petani: '{user_message}'"
             )
             response = client.models.generate_content(
-                model='gemini-2.5-flash', contents=prompt)
+                model='gemini-2.5-flash', contents=prompt, config={'max_output_tokens': 300})
             jawaban_final = f"**Berdasarkan Pakar AI (Gemini):**\n{response.text}"
             sumber = "Gemini API"
         except Exception as e:
