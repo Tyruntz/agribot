@@ -276,11 +276,13 @@ def chat():
     if not is_commodity_in_kb(user_message):
         try:
             prompt = (
-                f"Anda adalah pakar pertanian. Seorang petani bertanya: '{user_message}'. "
-                f"Berikan jawaban singkat, ramah, dan solutif khusus di bidang hama dan penyakit tanaman."
+                f"Anda adalah pakar pertanian. Jawab pertanyaan petani berikut dengan SINGKAT dan PADAT, "
+                f"maksimal 3-4 kalimat saja. Langsung ke poin utama, tidak perlu pembuka panjang. "
+                f"Fokus pada: nama penyakit/hama, penyebab, dan solusi praktis. "
+                f"Pertanyaan petani: '{user_message}'"
             )
             response = client.models.generate_content(
-                model='gemini-2.5-flash', contents=prompt)
+                model='gemini-2.5-flash', contents=prompt, config={'max_output_tokens': 300})
             return jsonify({
                 'jawaban': f"**Berdasarkan Pakar AI (Gemini):**\n{response.text}",
                 'sumber': 'Gemini API',
