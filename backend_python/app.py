@@ -315,7 +315,7 @@ def chat():
         penyakit = global_df.iloc[best_index][col_penyakit]
         solusi   = global_df.iloc[best_index][col_solusi]
         jawaban_final = (
-            f"**Berdasarkan database kami (Skor: {max_score:.2f}):**\n"
+            f"**Berdasarkan database kami**\n"
             f"Sepertinya tanaman Anda terkena **{penyakit}**.\n\n"
             f"**Solusi:** {solusi}"
         )
